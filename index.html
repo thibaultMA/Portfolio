@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script type="module" src="media.js"></script>
+
+
+
+    <title>Thibault MARIE-ANGELIQUE</title>
+</head>
+
+<body>
+
+    <section class="loader">
+        <div class="blockLettre">
+            <p class="lettre">L</p>
+            <p class="lettre">o</p>
+            <p class="lettre">a</p>
+            <p class="lettre">d</p>
+            <p class="lettre">i</p>
+            <p class="lettre">n</p>
+            <p class="lettre">g</p>
+        </div>
+    </section>
+    <header>
+        <section class="hfond">
+            <h1 class="titre"><a href="#"> Thibault<br> MARIE-ANGELIQUE</a></h1>
+            <ul>
+                <li><a href="#aPropos">À PROPOS</a></li>
+                <li><a href="#Competences">COMPÉTENCES</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#experience">ÉXPÉRIENCES</a></li>
+
+            </ul>
+            <div class="contact">
+                <a href="#contact">ME CONTACTER</a>
+            </div>
+        </section>
+    </header>
+    <aside>
+    </aside>
+    <main id="main">
+        <section id="aPropos">
+            <div class="aPropos">
+                <h2 class="sectionTitre">à propos de moi ...</h2>
+            </div>
+            <article class="profil">
+
+                <img class="matete" src="img/moi-modified.png" alt="tatete">
+                <div class="fenettre">
+                <div class="barre">
+                    <div class="barreTop">
+                        <div class="onglet ">
+                            <p class="barreIcon">💬</p>
+                            <p class="ongletNom"> Chat </p>
+                            <p class="croix">x</p>
+                        </div>
+                        <a target="blank" href="https://www.linkedin.com/in/thibault-marie-ang%C3%A9lique" class="onglet fermer">
+                            <img src="img/icon/linkedin.png" class="barreIcon" alt="LinkedIn">
+                            <p class="ongletNom"> LinkedIn </p>
+                            <p class="croix">x</p>
+                        </a>
+                        <a target="blank" href="https://github.com/thibaultMA" class="onglet fermer">
+                            <img src="img/logo/github.png" class="barreIcon">
+                            <p class="ongletNom"> Github </p>
+                            <p class="croix">x</p>
+                        </a>
+                        <div class="onglet fermer ajout">
+                            <p>+</p>
+                        </div>
+                    </div>
+                    <input type="submit" class="btnPage" value="_"></input>
+                    <input type="submit" class="btnPage" value="▢"></input>
+                    <input type="submit" class="btnPage" value="X"></input>
+                </div>
+                <p class="textPresentation">
+                </p>
+                </div>
+            </article>
+        </section>
+        <section id="vue">
+            <section id="Competences">
+                <h2 class="sectionTitre">Compétences</h2>
+                <article class="technoBox">
+                    <div class="techlist">
+                        <div class="tech" v-for="item in projet.technos">
+                            <a target="blank" :href="item.site">
+                                <img class="logos" :src="item.image" :alt="item.nom" :title="item.nom">
+                            </a>
+                            <P class="techNom">{{item.nom}}</P>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+            <section id="portfolio">
+                <div id="projets">
+                    <h2 class="TitreProjet">Mes projets </h2>
+                    <div class="boxliste">
+
+                        <div class="definProjet" v-if="totalProjet !=0">
+                            <div class="descriptionProjet">
+                                <h3 class="defProjet">{{projet[categoriProjet][first].nom}}</h3>
+                                <p class="defProjet">{{projet[categoriProjet][first].text}}</p>
+                                <div class="iconProjet">
+                                    <a  target="blank" v-for="tech in projet[categoriProjet][first].techno" :href="tech.site" class="link">
+                                        <img  :src="tech.url" class="technoProjet" :alt="tech.nom">
+                                    </a>
+                                    <a target="blank" :href="projet[categoriProjet][first].github" v-if="projet[categoriProjet][first].github != '' " class="github"> 
+                                        <img src="img/logo/github.png" alt="github" class="imgGithub" :title="'lien vers ' +projet[categoriProjet][first].nom">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="boxProjet">
+                            <h3 class="typeProjet" v-on:click="typeProjet('formations')"
+                                :class="{'fucusType' : categoriProjet === 'formations'  }">Formations</h3>
+                            <h3 class="typeProjet" v-on:click="typeProjet('perso')"
+                                :class="{'fucusType' : categoriProjet === 'perso'  }">personnel</h3>
+
+                            <img v-if="first != 0" class="btnclick btn_left" src="img/icon/arrow_left.svg" alt=""
+                                @click="decaleProjet(-1)">
+                            <img v-if="first != totalProjet-1" class="btnclick btn_right" src="img/icon/arrow_right.svg"
+                                alt="" @click="decaleProjet(1)">
+                            <div class="tproj" :class="categoriProjet" :style="{left:- totalPX + 'px'}">
+                                <article v-for="(item,index) in projet[categoriProjet]" class="projet"
+                                    :class="{'first' : first === index }">
+                                    <img :src="item.image" :alt="item.nom" class="photoProjet"
+                                        @click="projetCible(index)">
+                                </article>
+                            </div>
+                        </div>
+
+                    </div>
+            </section>
+            <section id="experience">
+                <h2 class="sectionTitre">Experience & Formation</h2>
+                <div class="ExpBox">
+                    <article class="exp">
+                        <img src="img/logo/OpenClassrooms.png" alt="" class="logoStructure">
+                        <div class="expInfo">
+                            <h3 class="expstructure">OpenClassRoom's</h3>
+                            <p class="expdate">2020 / 2021</p>
+                            <p class="expNom">Bac+2 developpeur web</p>
+                            <p class="expDescription">Formation en distenciel sur la creation d'un site web, apprentissage de plusieurs language</p>
+                        </div>
+                    </article>
+                    <article class="exp">
+                        <img src="img/logo/LCF_logo.png" alt="" class="logoStructure">
+                         <div class="expInfo">   
+                            <h3 class="expstructure">LCF Reseaux</h3>
+                            <p class="expdate">2019 / 2020</p>
+                            <p class="expNom">Technicien fibre optique</p>
+                            <p class="expDescription">Installation de fibre optique au pres de particuliers</p>
+                        </div>
+                    </article>
+                </div>  
+            </section>
+            
+        </section>
+    </main>
+    <footer >
+        <section id="contact">
+            <h2 class="sectionTitre">contact</h2>
+            <div class="BoxContact">
+                <a target="blank" href="CV_thibault.pdf" class="contactLink"><img src="img/icon/cv.png" alt="cv"> cv</a>
+                <a target="blank" href="https://www.linkedin.com/in/thibault-marie-ang%C3%A9lique" class="contactLink"><img src="img/icon/linkedin.png" alt="LinkedIn"> LinkedIn</a>
+                <a target="blank" href="https://github.com/thibaultMA" class="contactLink"><img src="img/logo/github.png" alt="github"> github</a>
+                <a target="blank" href="mailto:thibault.m-a@outlook.com" class="contactLink"><img src="img/icon/email.png" alt="email"> email</a>
+            </div>
+            <!-- email linkedin github cv -->
+        </section>
+    </footer>
+    <script type="module">
+
+        new Vue({
+            el: "#vue",
+            data() {
+                return {
+                    categoriProjet: 'formations',
+                    affiche: false,
+
+                    first: 0,
+                    nbrProj: 0,
+                    decalePX: [],
+                    totalPX: 0,
+                    totalProjet: 0,
+
+                    projet: {}
+                }
+            },
+            methods: {
+                projetCible(n) {
+                    let f = n - this.first
+                    this.decaleProjet(f)
+                },
+                typeProjet(type) {
+                    this.nbrProj = 0
+                    this.first = 0
+                    this.categoriProjet = type
+                    this.decalePX = []
+                    this.totalPX = 0
+                    this.totalProjet = 0
+                    this.totalProjet = this.projet[this.categoriProjet].length
+                },
+                decaleProjet(direction) {
+                    if ((direction == -1 && this.first == 0) || direction == 1 && this.first == this.totalProjet - 1) {// depasse pas les bord
+                        direction = 0
+                    }
+                    this.first = this.first + direction
+                    if (direction == 1) {
+                        this.decalePX.push(document.querySelectorAll('.projet')[this.first - 1].offsetWidth)
+                        this.totalPX = this.decalePX.reduce((acc, cur) => acc + cur, 0);
+                    }
+                    if (direction == -1) {
+                        this.decalePX.pop()
+                        let o = this.decalePX.reduce((acc, cur) => acc + cur, 0);
+
+                        this.totalPX = o
+                    }
+                },
+                endLoad() {
+                    const loader = document.querySelector(".loader")
+                    let annimText = document.querySelector('.textPresentation')
+                    let nomMachine = '<span class="textPrefix"> moi@PRESENTATION</span> :<span style="color:#6b96ca">~</span>$ '
+
+                    setTimeout(() => {
+                        loader.remove()
+                        voirla()
+                    }, 2000)
+
+                    function voirla() {
+
+                        let typewriter = new Typewriter(annimText, {
+                            deleteSpeed: 0,
+                            delay: null,
+                        })
+                        typewriter
+                            .pasteString(nomMachine)
+                            .pauseFor(2000)
+                            .typeString('Developpeur Web ')
+                            // .pauseFor(150)
+                            // .pauseFor(150)
+                            .typeString(" un peut <strong>FRONT END </strong>")
+                            // .pauseFor(300)
+                            .deleteChars(10)
+                            .typeString(" <strong>BACK END </strong>")
+                            .pauseFor(300)
+                            .deleteChars(18)
+                            .typeString(' Bref un peut <strong>FULL STACK</strong> <br>')
+                            .pasteString(nomMachine)
+                            .pauseFor(2000)
+                            // .pauseFor(300)
+                            .typeString('Retrouvez sur ce site,')
+                            .pauseFor(300)
+
+                            .typeString(' mes petit projet qui on fait de moi,')
+                            .pauseFor(300)
+
+                            .typeString(' le developpeur que je suis aujourd\'hui')
+                            .pauseFor(300)
+                            .typeString('<br>')
+                            .pasteString(nomMachine)
+                            .pauseFor(2000)
+                            .typeString('n\'hesitez pas a me contacter <a href="#contact" style="color:var(--mainColor)">ici</a> pour simplement discuté ou pour toutes questions <br>')
+                            .pasteString(nomMachine)
+                            .pauseFor(2000)
+                            .typeString(' merci et bonne visite <br>')
+                            .pasteString(nomMachine)
+                            .start();
+                    }
+
+                }
+            },
+            created() {
+                fetch('projet.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        let Ndata = {}
+                        for (const key in data) {
+                            if (key == "technos") {
+                                Ndata[key] = data[key]
+                            } else
+                                Ndata[key] = data[key].slice().reverse()
+                        }
+
+                        return Ndata
+                    })
+                    .then(p => {
+                        this.projet = p
+                        this.totalProjet = this.projet[this.categoriProjet].length
+                        this.endLoad()
+                    })
+            },
+            mounted: async function () {
+
+
+            },
+
+            updated: function () {
+            },
+
+
+        })
+    </script>
+
+
+</body>
+
+</html>

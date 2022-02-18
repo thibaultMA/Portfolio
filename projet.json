@@ -104,7 +104,7 @@
             "techno":[
                 {"nom":"NodeJs","url":"img/technos/nodeJs.svg","site":"https://nodejs.org/fr/"},
                 {"nom":"VueJs", "url":"img/technos/vue.svg","site":"https://fr.vuejs.org/index.html"},
-                {"nom":"MySQL", "url":"img/technos/mysql.svg","site":"https://www.mysql.com/fr/"}
+                {"nom":"mongoDB", "url":"img/technos/mongo.svg","site":"https://www.mongodb.com/"}
             ],
             "text": "reseau social d'entreprise",
             "github":"https://github.com/thibaultMA/Marie-Angelique_07_30062021"

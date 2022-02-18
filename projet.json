@@ -49,7 +49,7 @@
             "nom": "Orinoco",
             "image": "img/maquettes/formation/Orinoco/Capture1.PNG",
             "techno":[
-                {"nom":"NodeJs","url":"img/technos/nodejs.svg","site":"https://nodejs.org/fr/"},
+                {"nom":"NodeJs","url":"img/technos/nodeJs.svg","site":"https://nodejs.org/fr/"},
                 {"nom":"ejs","url":"img/technos/ejs.svg","site":"https://ejs.co/"}
             ],
             "text": "Construire un site d'e-commerce en relation avec une API",
@@ -59,7 +59,7 @@
             "nom": "So-Peckocko",
             "image": "img/maquettes/formation/So-Peckocko/Capturae.PNG",
             "techno":[
-                {"nom":"NodeJs",    "url":"img/technos/nodejs.svg","site":"https://nodejs.org/fr/"},
+                {"nom":"NodeJs",    "url":"img/technos/nodeJs.svg","site":"https://nodejs.org/fr/"},
                 {"nom":"MongoDB",   "url":"img/technos/mongo.svg","site":"https://www.mongodb.com/"}
             ],
             "text": "cré une API securisé",
@@ -70,7 +70,7 @@
             "nom": "Groupomania",
             "image": "./img/maquettes/formation/Groupomania/deskTop.PNG",
             "techno":[
-                {"nom":"NodeJs","url":"img/technos/nodejs.svg","site":"https://nodejs.org/fr/"},
+                {"nom":"NodeJs","url":"img/technos/nodeJs.svg","site":"https://nodejs.org/fr/"},
                 {"nom":"VueJs", "url":"img/technos/vue.svg","site":"https://fr.vuejs.org/index.html"},
                 {"nom":"MySQL", "url":"img/technos/mysql.svg","site":"https://www.mysql.com/fr/"}
             ],
@@ -102,7 +102,7 @@
             "nom": "redimensize",
             "image": "img/maquettes/perso/redimention/Capture.PNG",
             "techno":[
-                {"nom":"NodeJs","url":"img/technos/nodejs.svg","site":"https://nodejs.org/fr/"},
+                {"nom":"NodeJs","url":"img/technos/nodeJs.svg","site":"https://nodejs.org/fr/"},
                 {"nom":"VueJs", "url":"img/technos/vue.svg","site":"https://fr.vuejs.org/index.html"},
                 {"nom":"MySQL", "url":"img/technos/mysql.svg","site":"https://www.mysql.com/fr/"}
             ],

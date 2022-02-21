@@ -56,33 +56,32 @@
 
                 <img class="matete" src="img/moi-modified.png" alt="tatete">
                 <div class="fenettre">
-                <div class="barre">
-                    <div class="barreTop">
-                        <div class="onglet ">
-                            <p class="barreIcon">💬</p>
-                            <p class="ongletNom"> Chat </p>
-                            <p class="croix">x</p>
+                    <div class="barre">
+                        <div class="barreTop">
+                            <div class="onglet ">
+                                <p class="barreIcon">💬</p>
+                                <p class="ongletNom"> Chat </p>
+                                <p class="croix">x</p>
+                            </div>
+                            <a target="blank" href="https://www.linkedin.com/in/thibault-marie-ang%C3%A9lique" class="onglet fermer">
+                                <img src="img/icon/linkedin.png" class="barreIcon" alt="LinkedIn">
+                                <p class="ongletNom"> LinkedIn </p>
+                                <p class="croix">x</p>
+                            </a>
+                            <a target="blank" href="https://github.com/thibaultMA" class="onglet fermer">
+                                <img src="img/logo/github.png" class="barreIcon">
+                                <p class="ongletNom"> Github </p>
+                                <p class="croix">x</p>
+                            </a>
+                            <div class="onglet fermer ajout">
+                                <p>+</p>
+                            </div>
                         </div>
-                        <a target="blank" href="https://www.linkedin.com/in/thibault-marie-ang%C3%A9lique" class="onglet fermer">
-                            <img src="img/icon/linkedin.png" class="barreIcon" alt="LinkedIn">
-                            <p class="ongletNom"> LinkedIn </p>
-                            <p class="croix">x</p>
-                        </a>
-                        <a target="blank" href="https://github.com/thibaultMA" class="onglet fermer">
-                            <img src="img/logo/github.png" class="barreIcon">
-                            <p class="ongletNom"> Github </p>
-                            <p class="croix">x</p>
-                        </a>
-                        <div class="onglet fermer ajout">
-                            <p>+</p>
-                        </div>
+                        <input type="submit" class="btnPage" value="_"></input>
+                        <input type="submit" class="btnPage" value="▢"></input>
+                        <input type="submit" class="btnPage" value="X"></input>
                     </div>
-                    <input type="submit" class="btnPage" value="_"></input>
-                    <input type="submit" class="btnPage" value="▢"></input>
-                    <input type="submit" class="btnPage" value="X"></input>
-                </div>
-                <p class="textPresentation">
-                </p>
+                    <p class="textPresentation"></p>
                 </div>
             </article>
         </section>
@@ -104,7 +103,6 @@
                 <div id="projets">
                     <h2 class="TitreProjet">Mes projets </h2>
                     <div class="boxliste">
-
                         <div class="definProjet" v-if="totalProjet !=0">
                             <div class="descriptionProjet">
                                 <h3 class="defProjet">{{projet[categoriProjet][first].nom}}</h3>
@@ -117,7 +115,6 @@
                                         <img src="img/logo/github.png" alt="github" class="imgGithub" :title="'lien vers ' +projet[categoriProjet][first].nom">
                                     </a>
                                 </div>
-
                             </div>
                         </div>
 
@@ -127,11 +124,10 @@
                             <h3 class="typeProjet" v-on:click="typeProjet('perso')"
                                 :class="{'fucusType' : categoriProjet === 'perso'  }">personnel</h3>
 
-                            <img v-if="first != 0" class="btnclick btn_left" src="img/icon/arrow_left.svg" alt=""
-                                @click="decaleProjet(-1)">
-                            <img v-if="first != totalProjet-1" class="btnclick btn_right" src="img/icon/arrow_right.svg"
-                                alt="" @click="decaleProjet(1)">
-                            <div class="tproj" :class="categoriProjet" :style="{left:- totalPX + 'px'}">
+                            <img v-if="first != 0" class="btnclick btn_left" src="img/icon/arrow_left.svg" alt="" @click="decaleProjet(-1)">
+                            <img v-if="first != totalProjet-1" class="btnclick btn_right" src="img/icon/arrow_right.svg"alt="" @click="decaleProjet(1)">
+
+                            <div class="projetList" :class="categoriProjet" :style="{left:- totalPX + 'px'}">
                                 <article v-for="(item,index) in projet[categoriProjet]" class="projet"
                                     :class="{'first' : first === index }">
                                     <img :src="item.image" :alt="item.nom" class="photoProjet"

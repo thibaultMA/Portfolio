@@ -96,7 +96,6 @@ header a {
   margin: auto;
 }
 
-
 header .titre {
   /* text-align: center; */
   /* color: #ffffff; */
@@ -551,8 +550,7 @@ footer{
     height: 150px;
     align-items: center;
   }
-  .photoProjet{
-  }
+
 }
 @media (max-width: 614px) {
   .profil{

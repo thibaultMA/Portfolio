@@ -504,3 +504,14 @@ main {
 
     }
 }
+@keyframes flash {
+    0%{ 
+        color: var(--mainColor);
+    }
+    50%{
+        color: var(--barre);
+    }
+    100%{
+        color: var(--mainColor);
+    }
+}

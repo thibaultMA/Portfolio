@@ -772,4 +772,28 @@ main footer {
 #contact .BoxContact img {
   height: 1.7rem;
 }
+
+@-webkit-keyframes flash {
+  0% {
+    color: var(--mainColor);
+  }
+  50% {
+    color: var(--barre);
+  }
+  100% {
+    color: var(--mainColor);
+  }
+}
+
+@keyframes flash {
+  0% {
+    color: var(--mainColor);
+  }
+  50% {
+    color: var(--barre);
+  }
+  100% {
+    color: var(--mainColor);
+  }
+}
 /*# sourceMappingURL=style.css.map */

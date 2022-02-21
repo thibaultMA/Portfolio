@@ -272,7 +272,7 @@ footer{
   justify-content: space-around;
 }
 .tech{
-  width: auto;
+  width: 9%;
   margin: 1%;
   display: flex;
   flex-flow: column;
@@ -419,10 +419,12 @@ footer{
   border-radius:15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logoStructure{
   width:  25%;
+  height: fit-content;
 }
 .expInfo{
   display: flex;
@@ -499,6 +501,9 @@ footer{
   .ajout{
     width: 4%;
   }
+  .tech{
+    width: 14%;
+  }
   .photoProjet{
     height: 163px;
   }
@@ -515,6 +520,13 @@ footer{
   }
   .tech{
     width: 20%;
+  }
+  .ExpBox{
+    flex-flow: column;
+    align-items: center;
+  }
+  .exp{
+    width: 80%;
   }
 }
 @media (max-width: 639px) {
@@ -563,6 +575,9 @@ footer{
   }
   .ajout{
     width: 6%;
+  }
+  .exp{
+    width: 95%;
   }
 }
 @media (max-width: 425px) { 

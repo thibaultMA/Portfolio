@@ -4,6 +4,7 @@
         {"nom": "HTML",     "image": "img/technos/html.svg"     ,"site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
         {"nom": "CSS",      "image": "img/technos/css.svg"      ,"site":"https://developer.mozilla.org/fr/docs/Web/CSS" },
         {"nom":"JavaScript","image":"img/technos/js.svg"        ,"site":"https://www.javascript.com/"},
+        {"nom":"Java"       ,"image":"img/technos/java.svg"     ,"site":"https://www.java.com/fr/"},
         {"nom":"NodeJs",    "image":"./img/technos/nodeJs.svg"  ,"site":"https://nodejs.org/fr/"},
         {"nom":"ejs",       "image":"img/technos/ejs.svg"       ,"site":"https://ejs.co/"},
         {"nom":"VueJs",     "image":"img/technos/vue.svg"       ,"site":"https://fr.vuejs.org/index.html"},
@@ -33,7 +34,7 @@
                 {"nom": "CSS",  "url": "img/technos/css.svg","site":"https://developer.mozilla.org/fr/docs/Web/CSS" },
                 {"nom": "PSD",  "url": "img/technos/psd.svg"}
             ],
-            "text": "Réalisation d’animations en CSS à partir d’un support",
+            "text": "Réalisation d’une maquette et d’animations en CSS à partir d’un support ",
             "github":"https://github.com/thibaultMA/MArie-Angelique_03_05012021"
         },{
             "id":2,
@@ -42,7 +43,7 @@
             "techno":[
                 {"nom":"Chrome DevTools","url":"img/technos/chrome.svg","site":""}
             ],
-            "text": "Optimiser un site web existant SEO",
+            "text": "Optimiser un site web existant (SEO)",
             "github":"https://github.com/thibaultMA/Marie-Angelique_04_12022021"
         },{
             "id":3,
@@ -52,7 +53,7 @@
                 {"nom":"NodeJs","url":"img/technos/nodeJs.svg","site":"https://nodejs.org/fr/"},
                 {"nom":"ejs","url":"img/technos/ejs.svg","site":"https://ejs.co/"}
             ],
-            "text": "Construire un site d'e-commerce en relation avec une API",
+            "text": "Construire un site d'e-commerce en relation avec une API  // Utilisé une API pour crée un site de e-commerce ",
             "github":"https://github.com/thibaultMA/Marie-Angelique_05_08032021"
         },{
             "id":4,
@@ -62,7 +63,7 @@
                 {"nom":"NodeJs",    "url":"img/technos/nodeJs.svg","site":"https://nodejs.org/fr/"},
                 {"nom":"MongoDB",   "url":"img/technos/mongo.svg","site":"https://www.mongodb.com/"}
             ],
-            "text": "cré une API securisé",
+            "text": "Creation une API securisé qui permet aux utilisateurs d'ajouter leurs sauces préférées et liker ou disliker les sauces proposées par les autres.",
             "github":"https://github.com/thibaultMA/Marie-Angelique_06_03062021"
             
         },{
@@ -74,7 +75,7 @@
                 {"nom":"VueJs", "url":"img/technos/vue.svg","site":"https://fr.vuejs.org/index.html"},
                 {"nom":"MySQL", "url":"img/technos/mysql.svg","site":"https://www.mysql.com/fr/"}
             ],
-            "text": "reseau social d'entreprise",
+            "text": "Creation d'un backend et d'un front end pour un reseau social d'entreprise",
             "github":"https://github.com/thibaultMA/Marie-Angelique_07_30062021"
             
         }
@@ -88,14 +89,14 @@
                 {"nom":"HTML","url":"img/technos/html.svg"},
                 {"nom":"CSS","url":"img/technos/css.svg"}
             ],
-            "text": "premier site realisé pour debuté le HTML & CSS",
+            "text": "Première realisation de site pour decouvrir/debuté en HTML & CSS",
             "github":""
         },{
             "id":1,
             "nom": "Estia",
             "image": "img/maquettes/perso/progress.jpg",
             "techno":[],
-            "text": "jeu en ligne sur navigateur",
+            "text": "Jeu d'exploration et de strategie en ligne sur navigateur",
             "github":""
         },{
             "id":5,
@@ -106,8 +107,8 @@
                 {"nom":"VueJs", "url":"img/technos/vue.svg","site":"https://fr.vuejs.org/index.html"},
                 {"nom":"MongoDB",   "url":"img/technos/mongo.svg","site":"https://www.mongodb.com/"}
             ],
-            "text": "reseau social d'entreprise",
-            "github":"https://github.com/thibaultMA/Marie-Angelique_07_30062021"
+            "text": "Outils permetant de redimentioner la taille en pixel d'une image ",
+            "github":""
             
         }
 

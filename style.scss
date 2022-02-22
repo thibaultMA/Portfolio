@@ -1,5 +1,7 @@
 .loader{
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     background: var(--box);
@@ -52,15 +54,14 @@
     --hover:#f25a11;
     --mainColor: #BC4A14;
     --consoleText:#7cfd38;
-    @media (prefers-color-scheme: dark) {
         --bgc:#19181b;
         --dark:#000;
         --onglet:#272727;
 
         --fontWhite:#ffffff;
         --box:#202325;
+        --focusTexte:#6b96ca;
 
-    }
 }
 
 body{
@@ -83,46 +84,95 @@ header {
     }
     .hfond{
         display: flex;
-        flex-flow: wrap;
         max-width: 1600px;
         margin: auto;
+        justify-content: space-between;
+        align-items: center;
         .titre {
             margin-left: 5%;
             margin: 2%;
             font-size: 20px;
-        }
-        ul {
-            padding: 2px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            li {
-                list-style: none;
-                padding:  5px;
-                margin: 5px;
-                height: min-content;
-                align-self: center;
-                :hover a{
-                    font-weight: bold;
-                    font-size: 18px;
+            white-space: nowrap;
+        } 
+         .icon {
+             display: none;
+            color: var(--fontWhite);
+            position: relative;
+            right: 2%;
+            margin-left: 2px;
+            margin-top: 10px;
+            width: 17px;
+            height: 2px;
+            background-color: currentColor;
+            &:before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: 0;
+                width: 17px;
+                height: 2px;
+                background-color: currentColor;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 5px;
+                left: 0;
+                width: 17px;
+                height: 2px;
+                background-color: currentColor;
+            }
+            @media (max-width: 768px){
+                display: block;
+            }
+          }
+          .decepir{
+              display: flex;
+              width: 100%;
+              @media (max-width: 926px){
+                  flex-flow: wrap;
+            }
+            @media (max-width: 768px){
+                display: none;
+            }
+            ul {
+                padding: 2px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                li {
+                    list-style: none;
+                    padding:  5px;
+                    margin: 5px;
+                    height: min-content;
+                    align-self: center;
+                    &:hover a{
+                        font-weight: bold;
+                        font-size: 18px;
+                    }
+                }
+                @media (max-width: 441px){
+                    display: none;
                 }
             }
-        }
-        .contact{
-            background: var(--mainColor);
-            justify-self: flex-end;
-            font-weight: bold;
-            border-radius: 50px;
-            align-self: center;
-            padding:  10px;
-            margin: 2%;
-            margin-left: auto;
-            :hover{
-                animation: hoverContact forwards reverse linear 0.2s;;
-                transition: 0.2s;
-                background-color: var(--hover);
-              
-                text-align: center;
+            .contact{
+                background: var(--mainColor);
+                justify-self: flex-end;
+                font-weight: bold;
+                border-radius: 50px;
+                align-self: center;
+                padding:  10px;
+                margin: 2%;
+                margin-left: auto;
+                &:hover{
+                    animation: hoverContact forwards reverse linear 0.2s;;
+                    transition: 0.2s;
+                    background-color: var(--hover);
+                    text-align: center;
+                }
+                @media (max-width: 926px){
+                    order: -1;
+                }
             }
         }
     }
@@ -200,18 +250,9 @@ main {
                     .barreIcon{
                         height: 1.1rem;
                     }
-                    .btnPage{
-                        color:  var(--dark);
-                        border: none;
-                        :last-child{
-                            border-radius: 0 5px 0 0;
-                            :hover{
-                                background: #da2727;
-                                border-style: none;
-                            }
-                        }
-                        :hover{
-                            opacity: 0.8;
+                    .croix{
+                        @media (max-width: 489px) {
+                            display: none; 
                         }
                     }
                     @media (max-width: 849px){
@@ -237,14 +278,30 @@ main {
                     @media (max-width: 707px){
                         width: 6%;
                     }
-
+                    @media (max-width: 423px){
+                        display: none;
+                    }
                 }  
-            }    
+            }  
+            .btnPage{
+                color:  var(--dark);
+                border: none;
+                &:last-child{
+                    border-radius: 0 5px 0 0;
+                    &:hover{
+                        background: #da2727;
+                        border-style: none;
+                    }
+                }
+                &:hover{
+                    opacity: 0.8;
+                }
+            }  
         }
         .textPresentation{
             margin: 20px;
             width: 90%;
-            height: 114px;
+            height: 136px;
             left: 5%;
             top: 15%;
             position: relative;
@@ -257,26 +314,46 @@ main {
                 height: min-content;
                 color: var(--consoleText);
             }
-            @media (max-width: 1099px){
-                height: 144px;
+            .focusText{
+                color: var(--focusTexte);
+            }
+            @media (max-width: 966px){
+                height: 165px;
                 line-height:20px;
             }
-            @media (max-width: 707px) {
-                height: 166px;
+            @media (max-width: 952px) {
+                height: 186px;
             }
-            @media (max-width: 639px){
-                height: 187px;
+            @media (max-width: 714px){
+                height: 206px;
             }
             @media (max-width: 614px) {
                 position: unset;
+                height: 186px;
+            }
+            @media (max-width: 598px) {
+                height: 206px;
+            }
+            @media (max-width: 502px) {
+                height: 226px;
+            }
+            @media (max-width: 426px) {
+                height: 246px;
             }
 
+        }
+        @media (max-width: 425px) {
+            width: 100%;
         }
     }
     @media (max-width: 614px) {
         width: 95%;
         right: 0;
     }
+    @media (max-width: 425px) {
+        width: 100%;
+    }
+    
 }
                     // skils
 .techlist{
@@ -346,6 +423,9 @@ main {
                 display: flex;
                 flex-flow: column;
                 justify-content: space-evenly;
+                .defProjetNom{
+                    text-decoration: underline;
+                }
                 .iconProjet{
                     position: relative;
                     .link{
@@ -402,7 +482,7 @@ main {
                 display: flex;
                 position: relative; 
                 .projet {
-                    opacity: 0.5;
+                    opacity: 0.3;
                     .photoProjet {
                         margin-top: 15px;
                         height:   280px;

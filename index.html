@@ -21,7 +21,7 @@
 
 <body>
 
-    <!-- <section class="loader">
+    <section class="loader">
         <div class="blockLettre">
             <p class="lettre">L</p>
             <p class="lettre">o</p>
@@ -31,19 +31,22 @@
             <p class="lettre">n</p>
             <p class="lettre">g</p>
         </div>
-    </section> -->
+    </section>
     <header>
         <section class="hfond">
             <h1 class="titre"><a href="#"> Thibault<br> MARIE-ANGELIQUE</a></h1>
-            <ul>
-                <li><a href="#aPropos">À PROPOS</a></li>
-                <li><a href="#Competences">COMPÉTENCES</a></li>
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#experience">ÉXPÉRIENCES</a></li>
+            <div class="icon"></div> 
+            <div class="decepir">
+                <ul>
+                    <li><a href="#aPropos">À PROPOS</a></li>
+                    <li><a href="#Competences">COMPÉTENCES</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#experience">ÉXPÉRIENCES</a></li>
 
-            </ul>
-            <div class="contact">
-                <a href="#contact">ME CONTACTER</a>
+                </ul>
+                <div class="contact">
+                    <a href="#contact">ME CONTACTER</a>
+                </div>
             </div>
         </section>
     </header>
@@ -51,7 +54,7 @@
     </aside>
     <main id="main">
         <section id="aPropos">
-                <h2 class="sectionTitre">à propos de moi ...</h2>
+                <h2 class="sectionTitre"> </h2>
             <article class="profil">
 
                 <img class="matete" src="img/moi-modified.png" alt="tatete">
@@ -59,8 +62,8 @@
                     <div class="barre">
                         <div class="barreTop">
                             <div class="onglet ">
-                                <p class="barreIcon">💬</p>
-                                <p class="ongletNom"> Chat </p>
+                                <img src="img/logo/ubuntu.svg" alt="ubuntu" class="barreIcon">
+                                <p class="ongletNom"> terminal </p>
                                 <p class="croix">x</p>
                             </div>
                             <a target="blank" href="https://www.linkedin.com/in/thibault-marie-ang%C3%A9lique" class="onglet fermer">
@@ -101,11 +104,11 @@
             </section>
             <section id="portfolio">
                 <div id="projets">
-                    <h2 class="TitreProjet">Mes projets </h2>
+                    <h2 class="TitreProjet ">Projets</h2>
                     <div class="boxliste">
                         <div class="definProjet" v-if="totalProjet !=0">
                             <div class="descriptionProjet">
-                                <h3 class="defProjet">{{projet[categoriProjet][first].nom}}</h3>
+                                <h3 class="defProjetNom">{{projet[categoriProjet][first].nom}}</h3>
                                 <p class="defProjet">{{projet[categoriProjet][first].text}}</p>
                                 <div class="iconProjet">
                                     <a  target="blank" v-for="tech in projet[categoriProjet][first].techno" :href="tech.site" class="link">
@@ -122,7 +125,7 @@
                             <h3 class="typeProjet" v-on:click="typeProjet('formations')"
                                 :class="{'fucusType' : categoriProjet === 'formations'  }">Formations</h3>
                             <h3 class="typeProjet" v-on:click="typeProjet('perso')"
-                                :class="{'fucusType' : categoriProjet === 'perso'  }">personnel</h3>
+                                :class="{'fucusType' : categoriProjet === 'perso'  }">Personnels</h3>
 
                             <img v-if="first != 0" class="btnclick btn_left" src="img/icon/arrow_left.svg" alt="" @click="decaleProjet(-1)">
                             <img v-if="first != totalProjet-1" class="btnclick btn_right" src="img/icon/arrow_right.svg"alt="" @click="decaleProjet(1)">
@@ -138,10 +141,7 @@
 
                     </div>
             </section>
-            <section class="objectif">
-                <h2 class="sectionTitre">objectif 2022</h2>
-                
-            </section>
+
             <section id="experience">
                 <h2 class="sectionTitre">Experience & Formation</h2>
                 <div class="ExpBox">
@@ -180,8 +180,7 @@
             <!-- email linkedin github cv -->
         </section>
     </footer>
-    <script type="module">
-
+    <script>
         new Vue({
             el: "#vue",
             data() {
@@ -200,10 +199,12 @@
             },
             methods: {
                 projetCible(n) {
+
                     let f = n - this.first
                     this.decaleProjet(f)
                 },
                 typeProjet(type) {
+
                     this.nbrProj = 0
                     this.first = 0
                     this.categoriProjet = type
@@ -214,17 +215,19 @@
                 },
                 decaleProjet(direction) {
                     if ((direction == -1 && this.first == 0) || direction == 1 && this.first == this.totalProjet - 1) {// depasse pas les bord
+
                         direction = 0
                     }
                     this.first = this.first + direction
                     if (direction == 1) {
+
                         this.decalePX.push(document.querySelectorAll('.projet')[this.first - 1].offsetWidth)
                         this.totalPX = this.decalePX.reduce((acc, cur) => acc + cur, 0);
                     }
                     if (direction == -1) {
+
                         this.decalePX.pop()
                         let o = this.decalePX.reduce((acc, cur) => acc + cur, 0);
-
                         this.totalPX = o
                     }
                 },
@@ -234,7 +237,7 @@
                     let nomMachine = '<span class="textPrefix"> moi@PRESENTATION</span> :<span style="color:#6b96ca">~</span>$ '
 
                     setTimeout(() => {
-                        // loader.remove()
+                        loader.remove()
                         voirla()
                     }, 2000)
 
@@ -242,43 +245,58 @@
 
                         let typewriter = new Typewriter(annimText, {
                             deleteSpeed: 0,
-                            delay: null,
+                            delay: 0,
                         })
                         typewriter
                             .pasteString(nomMachine)
-                            .pauseFor(2000)
-                            .typeString('Developpeur Web ')
-                            // .pauseFor(150)
-                            // .pauseFor(150)
-                            .typeString(" un peut <strong>FRONT END </strong>")
+                            // .pauseFor(2000)
+                            // .changeDelay
+                            .typeString('Développeur Web ')
+                            .typeString(' ')
                             // .pauseFor(300)
-                            .deleteChars(10)
-                            .typeString(" <strong>BACK END </strong>")
-                            .pauseFor(300)
-                            .deleteChars(18)
-                            .typeString(' Bref un peut <strong>FULL STACK</strong> <br>')
+                            // .pauseFor(150)
+                            .typeString(" un peu <strong class='focusText'>FRONT END</strong>")
+                            // .pauseFor(600)
+                            .deleteChars(17)
+                            .typeString(" un peu <strong  class='focusText'>BACK END</strong>")
+                            // .pauseFor(600)
+                            .deleteChars(17)
+                            .typeString(" Bref un peu <strong  class='focusText' > FULL STACK</strong> <br>")
                             .pasteString(nomMachine)
-                            .pauseFor(2000)
+                            // .pauseFor(2000)
                             // .pauseFor(300)
                             .typeString('Retrouvez sur ce site,')
-                            .pauseFor(300)
-
-                            .typeString(' mes petit projet qui on fait de moi,')
-                            .pauseFor(300)
-
-                            .typeString(' le developpeur que je suis aujourd\'hui')
-                            .pauseFor(300)
                             .typeString('<br>')
                             .pasteString(nomMachine)
-                            .pauseFor(2000)
-                            .typeString('n\'hesitez pas a me contacter <a href="#contact" style="color:var(--mainColor)">ici</a> pour simplement discuté ou pour toutes questions <br>')
+                            // .pauseFor(300)
+
+                            .typeString("<strong class='focusText'> les projets </strong> ")
+                            // .pauseFor(300)
+                            .typeString(" qui ont fait de moi")
+                            // .pauseFor(300)
+
+                            .typeString(' le développeur que je suis aujourd\'hui')
+                            // .pauseFor(300)
+                            .typeString('<br>')
                             .pasteString(nomMachine)
-                            .pauseFor(2000)
-                            .typeString(' merci et bonne visite <br>')
+                            // .pauseFor(2000)
+                            .typeString("N\'hésitez pas à me contacter <a href='#contact' class='focusText' ><strong class='focusText'>ICI</strong></a><br>")
+                            .pasteString(nomMachine)
+                            // .pauseFor(700)
+                            .typeString('pour simplement discuter')
+                            // .pauseFor(500)
+                            .typeString(' ou pour toutes questions sur mon profil <br>')
+
+                            .pasteString(nomMachine)
+                            // .pauseFor(1000)
+                            .typeString(' Merci ')
+                            // .pauseFor(500)
+                            .typeString(' et ')
+                            // .pauseFor(300)
+                            .typeString('bonne visite !<br>')
                             .pasteString(nomMachine)
                             .start();
                     }
-
                 }
             },
             created() {
@@ -292,7 +310,6 @@
                             } else
                                 Ndata[key] = data[key].slice().reverse()
                         }
-
                         return Ndata
                     })
                     .then(p => {
@@ -302,18 +319,10 @@
                     })
             },
             mounted: async function () {
-
-
             },
-
             updated: function () {
             },
-
-
         })
     </script>
-
-
 </body>
-
 </html>

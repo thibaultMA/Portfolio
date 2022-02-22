@@ -3,13 +3,13 @@
     "technos":[
         {"nom": "HTML",     "image": "img/technos/html.svg"     ,"site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
         {"nom": "CSS",      "image": "img/technos/css.svg"      ,"site":"https://developer.mozilla.org/fr/docs/Web/CSS" },
-        {"nom":"JavaScript","image":"img/technos/js.svg"        ,"site":"https://www.javascript.com/"},
-        {"nom":"Java"       ,"image":"img/technos/java.svg"     ,"site":"https://www.java.com/fr/"},
-        {"nom":"NodeJs",    "image":"./img/technos/nodeJs.svg"  ,"site":"https://nodejs.org/fr/"},
         {"nom":"ejs",       "image":"img/technos/ejs.svg"       ,"site":"https://ejs.co/"},
+        {"nom":"JavaScript","image":"img/technos/js.svg"        ,"site":"https://www.javascript.com/"},
+        {"nom":"NodeJs",    "image":"./img/technos/nodeJs.svg"  ,"site":"https://nodejs.org/fr/"},
         {"nom":"VueJs",     "image":"img/technos/vue.svg"       ,"site":"https://fr.vuejs.org/index.html"},
         {"nom":"MySQL",     "image":"img/technos/mysql.svg"     ,"site":"https://www.mysql.com/fr/"},
-        {"nom":"MongoDB",   "image":"img/technos/mongo.svg"     ,"site":"https://www.mongodb.com/"}
+        {"nom":"MongoDB",   "image":"img/technos/mongo.svg"     ,"site":"https://www.mongodb.com/"},
+        {"nom":"Java"       ,"image":"img/technos/java.svg"     ,"site":"https://www.java.com/fr/"}
         
     ],
     "formations":[
@@ -53,7 +53,7 @@
                 {"nom":"NodeJs","url":"img/technos/nodeJs.svg","site":"https://nodejs.org/fr/"},
                 {"nom":"ejs","url":"img/technos/ejs.svg","site":"https://ejs.co/"}
             ],
-            "text": "Construire un site d'e-commerce en relation avec une API  // Utilisé une API pour crée un site de e-commerce ",
+            "text": "Construction d'un site de E-commerce via le traitement des données renvoyées par une API",
             "github":"https://github.com/thibaultMA/Marie-Angelique_05_08032021"
         },{
             "id":4,

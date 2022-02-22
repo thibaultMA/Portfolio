@@ -1,5 +1,7 @@
 .loader {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background: var(--box);
@@ -84,16 +86,12 @@
   --hover:#f25a11;
   --mainColor: #BC4A14;
   --consoleText:#7cfd38;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bgc:#19181b;
-    --dark:#000;
-    --onglet:#272727;
-    --fontWhite:#ffffff;
-    --box:#202325;
-  }
+  --bgc:#19181b;
+  --dark:#000;
+  --onglet:#272727;
+  --fontWhite:#ffffff;
+  --box:#202325;
+  --focusTexte:#6b96ca;
 }
 
 body {
@@ -123,19 +121,82 @@ header .hfond {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
   max-width: 1600px;
   margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .hfond .titre {
   margin-left: 5%;
   margin: 2%;
   font-size: 20px;
+  white-space: nowrap;
 }
 
-header .hfond ul {
+header .hfond .icon {
+  display: none;
+  color: var(--fontWhite);
+  position: relative;
+  right: 2%;
+  margin-left: 2px;
+  margin-top: 10px;
+  width: 17px;
+  height: 2px;
+  background-color: currentColor;
+}
+
+header .hfond .icon:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 17px;
+  height: 2px;
+  background-color: currentColor;
+}
+
+header .hfond .icon:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 17px;
+  height: 2px;
+  background-color: currentColor;
+}
+
+@media (max-width: 768px) {
+  header .hfond .icon {
+    display: block;
+  }
+}
+
+header .hfond .decepir {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+@media (max-width: 926px) {
+  header .hfond .decepir {
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  header .hfond .decepir {
+    display: none;
+  }
+}
+
+header .hfond .decepir ul {
   padding: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,7 +208,7 @@ header .hfond ul {
           justify-content: space-between;
 }
 
-header .hfond ul li {
+header .hfond .decepir ul li {
   list-style: none;
   padding: 5px;
   margin: 5px;
@@ -159,12 +220,18 @@ header .hfond ul li {
       align-self: center;
 }
 
-header .hfond ul li :hover a {
+header .hfond .decepir ul li:hover a {
   font-weight: bold;
   font-size: 18px;
 }
 
-header .hfond .contact {
+@media (max-width: 441px) {
+  header .hfond .decepir ul {
+    display: none;
+  }
+}
+
+header .hfond .decepir .contact {
   background: var(--mainColor);
   justify-self: flex-end;
   font-weight: bold;
@@ -177,12 +244,20 @@ header .hfond .contact {
   margin-left: auto;
 }
 
-header .hfond .contact :hover {
+header .hfond .decepir .contact:hover {
   animation: hoverContact forwards reverse linear 0.2s;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   background-color: var(--hover);
   text-align: center;
+}
+
+@media (max-width: 926px) {
+  header .hfond .decepir .contact {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
 }
 
 main {
@@ -296,22 +371,10 @@ main footer {
   height: 1.1rem;
 }
 
-.profil .fenettre .barre .barreTop .onglet .btnPage {
-  color: var(--dark);
-  border: none;
-}
-
-.profil .fenettre .barre .barreTop .onglet .btnPage :last-child {
-  border-radius: 0 5px 0 0;
-}
-
-.profil .fenettre .barre .barreTop .onglet .btnPage :last-child :hover {
-  background: #da2727;
-  border-style: none;
-}
-
-.profil .fenettre .barre .barreTop .onglet .btnPage :hover {
-  opacity: 0.8;
+@media (max-width: 489px) {
+  .profil .fenettre .barre .barreTop .onglet .croix {
+    display: none;
+  }
 }
 
 @media (max-width: 849px) {
@@ -356,10 +419,34 @@ main footer {
   }
 }
 
+@media (max-width: 423px) {
+  .profil .fenettre .barre .barreTop .ajout {
+    display: none;
+  }
+}
+
+.profil .fenettre .barre .btnPage {
+  color: var(--dark);
+  border: none;
+}
+
+.profil .fenettre .barre .btnPage:last-child {
+  border-radius: 0 5px 0 0;
+}
+
+.profil .fenettre .barre .btnPage:last-child:hover {
+  background: #da2727;
+  border-style: none;
+}
+
+.profil .fenettre .barre .btnPage:hover {
+  opacity: 0.8;
+}
+
 .profil .fenettre .textPresentation {
   margin: 20px;
   width: 90%;
-  height: 114px;
+  height: 136px;
   left: 5%;
   top: 15%;
   position: relative;
@@ -378,28 +465,57 @@ main footer {
   color: var(--consoleText);
 }
 
-@media (max-width: 1099px) {
+.profil .fenettre .textPresentation .focusText {
+  color: var(--focusTexte);
+}
+
+@media (max-width: 966px) {
   .profil .fenettre .textPresentation {
-    height: 144px;
+    height: 165px;
     line-height: 20px;
   }
 }
 
-@media (max-width: 707px) {
+@media (max-width: 952px) {
   .profil .fenettre .textPresentation {
-    height: 166px;
+    height: 186px;
   }
 }
 
-@media (max-width: 639px) {
+@media (max-width: 714px) {
   .profil .fenettre .textPresentation {
-    height: 187px;
+    height: 206px;
   }
 }
 
 @media (max-width: 614px) {
   .profil .fenettre .textPresentation {
     position: unset;
+    height: 186px;
+  }
+}
+
+@media (max-width: 598px) {
+  .profil .fenettre .textPresentation {
+    height: 206px;
+  }
+}
+
+@media (max-width: 502px) {
+  .profil .fenettre .textPresentation {
+    height: 226px;
+  }
+}
+
+@media (max-width: 426px) {
+  .profil .fenettre .textPresentation {
+    height: 246px;
+  }
+}
+
+@media (max-width: 425px) {
+  .profil .fenettre {
+    width: 100%;
   }
 }
 
@@ -407,6 +523,12 @@ main footer {
   .profil {
     width: 95%;
     right: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .profil {
+    width: 100%;
   }
 }
 
@@ -528,6 +650,10 @@ main footer {
           justify-content: space-evenly;
 }
 
+#projets .boxliste .definProjet .descriptionProjet .defProjetNom {
+  text-decoration: underline;
+}
+
 #projets .boxliste .definProjet .descriptionProjet .iconProjet {
   position: relative;
 }
@@ -603,7 +729,7 @@ main footer {
 }
 
 #projets .boxliste .boxProjet .projetList .projet {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 #projets .boxliste .boxProjet .projetList .projet .photoProjet {

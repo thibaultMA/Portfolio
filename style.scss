@@ -65,6 +65,7 @@
 }
 *{
     margin: 0;
+    
 }
 body{
   
@@ -76,6 +77,7 @@ body{
         color: var(--fontWhite);
         text-decoration: none;
     }
+
 } 
 header {
     padding: 30px 5px 0;  
@@ -188,6 +190,11 @@ main {
     footer{
         padding-top: 6%;
     }
+    p,a{
+        @media (max-width: 425px){
+            font-size: 14px;
+        }
+    }
 }
 .sectionTitre {
     text-align: center;
@@ -251,7 +258,7 @@ main {
                         height: 1.1rem;
                     }
                     .croix{
-                        @media (max-width: 489px) {
+                        @media ( max-width: 489px) {
                             display: none; 
                         }
                     }

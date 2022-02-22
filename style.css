@@ -274,6 +274,12 @@ main footer {
   padding-top: 6%;
 }
 
+@media (max-width: 425px) {
+  main p, main a {
+    font-size: 14px;
+  }
+}
+
 .sectionTitre {
   text-align: center;
   margin: 5px;

@@ -94,14 +94,14 @@
   --focusTexte:#6b96ca;
 }
 
+* {
+  margin: 0;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--fontWhite);
   background-color: var(--bgc);
-}
-
-body * {
-  margin: 0;
 }
 
 body a {
@@ -395,6 +395,12 @@ main footer {
   }
 }
 
+@media (max-width: 423px) {
+  .profil .fenettre .barre .barreTop .onglet {
+    width: 100%;
+  }
+}
+
 .profil .fenettre .barre .barreTop .fermer {
   background: var(--onglet);
 }
@@ -553,6 +559,9 @@ main footer {
       -ms-flex-flow: column;
           flex-flow: column;
   max-width: 145.562px;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
 }
 
 .techlist .tech a {
@@ -870,17 +879,17 @@ main footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   height: 200px;
   -ms-flex-flow: wrap;
       flex-flow: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #contact .BoxContact .contactLink {
   margin: 10px;
-  width: calc(50% - 20px);
+  width: 44%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -889,10 +898,6 @@ main footer {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-#contact .BoxContact svg {
-  height: 1.7rem;
 }
 
 #contact .BoxContact img {

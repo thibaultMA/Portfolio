@@ -63,15 +63,15 @@
         --focusTexte:#6b96ca;
 
 }
-
+*{
+    margin: 0;
+}
 body{
   
     font-family: Arial, Helvetica, sans-serif;
     color: var(--fontWhite);
     background-color: var(--bgc);
-    *{
-        margin: 0;
-    }
+    
     a {
         color: var(--fontWhite);
         text-decoration: none;
@@ -264,6 +264,9 @@ main {
                     @media (max-width: 707px){
                         width: 28%;
                     }
+                    @media (max-width: 423px){
+                        width: 100%;
+                    }
                 }
                 .fermer{
                     background: var(--onglet);
@@ -366,6 +369,8 @@ main {
         display: flex;
         flex-flow: column;
         max-width: 145.562px;
+        min-width: min-content;
+
         a {
             background: var(--box);
             border-radius:15px;
@@ -558,26 +563,27 @@ main {
         align-items: center;
     } 
 }   
-                    //contact
+//contact
 #contact{
     border-top: solid var(--barre);
     background: var(--box);
     .BoxContact{
         margin: auto;
         display: flex ;
-        width: max-content;
         height: 200px;
         flex-flow: wrap;
+        justify-content: center;
+        @media (max-width: 350px){
+        } 
+        
         .contactLink{
             margin: 10px;
-            width: calc(50% - 20px);
+            width: 44%;
             display: flex;
             align-items: center;
             justify-content: space-around;
         }
-        svg{
-            height: 1.7rem;
-        }
+
         img{
             height: 1.7rem;
         }

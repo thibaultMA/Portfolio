@@ -79,6 +79,19 @@ body{
     }
 
 } 
+.navfond{
+    display: none;
+    z-index: 2;
+    height: 100vh;
+    width: 100vw;
+    background: var(--barre);
+    opacity: 0.4;
+}
+.nav{
+    display: block;
+    position: fixed;
+
+}
 header {
     padding: 30px 5px 0;  
     header a {
@@ -137,6 +150,7 @@ header {
             @media (max-width: 768px){
                 display: none;
             }
+            
             ul {
                 padding: 2px;
                 display: flex;
@@ -177,6 +191,34 @@ header {
                 }
             }
         }
+        .navir{
+            display: block;
+            height: 200vh;
+            right: 0;
+        }
+        .nav{                               //mobile nav
+            position: fixed;
+            display: flex;
+            height: 100vh;
+            width: 60%;
+            background: var(--box);
+            right: 0;
+            top: 0;
+            z-index: 4;
+            // border-left: solid var(--fontWhite);
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            ul{
+                flex-flow: column;
+                // height: 50%;
+            }
+            .contact{
+                order: 2;
+                margin: 0;
+            }
+        }
+
     }
 }
 main {
@@ -486,8 +528,8 @@ main {
                 left: -5px;
             }
             .btn_right{
-
-            right: 0;
+                right: 0;
+                transform: scaleX(-1);
             }
             .projetList{
                 transition: 0.2s;
@@ -574,14 +616,23 @@ main {
 #contact{
     border-top: solid var(--barre);
     background: var(--box);
+    margin-top: 10%;
     .BoxContact{
         margin: auto;
         display: flex ;
         height: 200px;
         flex-flow: wrap;
         justify-content: center;
-        @media (max-width: 350px){
-        } 
+        max-width: 40%;
+        @media (max-width: 850px){
+            min-width: 60%;
+        }
+        @media (max-width: 573px){
+            min-width: 70%;
+        }
+        @media (max-width: 493px){
+            min-width: 90%;
+        }
         
         .contactLink{
             margin: 10px;
@@ -597,6 +648,8 @@ main {
 
     }
 }
+
+
 @keyframes flash {
     0%{ 
         color: var(--mainColor);

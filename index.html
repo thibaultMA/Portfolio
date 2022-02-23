@@ -21,7 +21,6 @@
 </head>
 
 <body>
-
     <section class="loader">
         <div class="blockLettre">
             <p class="lettre">L</p>
@@ -33,10 +32,12 @@
             <p class="lettre">g</p>
         </div>
     </section>
+    <div class="navfond"></div>
     <header>
         <section class="hfond">
             <h1 class="titre"><a href="#"> Thibault<br> MARIE-ANGELIQUE</a></h1>
             <div class="icon"></div> 
+
             <div class="decepir">
                 <ul>
                     <li><a href="#aPropos">À PROPOS</a></li>
@@ -129,7 +130,7 @@
                                 :class="{'fucusType' : categoriProjet === 'perso'  }">Personnels</h3>
 
                             <img v-if="first != 0" class="btnclick btn_left" src="img/icon/arrow_left.svg" alt="" @click="decaleProjet(-1)">
-                            <img v-if="first != totalProjet-1" class="btnclick btn_right" src="img/icon/arrow_right.svg"alt="" @click="decaleProjet(1)">
+                            <img v-if="first != totalProjet-1" class="btnclick btn_right" src="img/icon/arrow_left.svg"alt="" @click="decaleProjet(1)">
 
                             <div class="projetList" :class="categoriProjet" :style="{left:- totalPX + 'px'}">
                                 <article v-for="(item,index) in projet[categoriProjet]" class="projet"

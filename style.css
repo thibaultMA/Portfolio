@@ -140,9 +140,6 @@ header .hfond {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 header .hfond .titre {
@@ -237,12 +234,6 @@ header .hfond .decepir ul li {
 header .hfond .decepir ul li:hover a {
   font-weight: bold;
   font-size: 18px;
-}
-
-@media (max-width: 441px) {
-  header .hfond .decepir ul {
-    display: none;
-  }
 }
 
 header .hfond .decepir .contact {

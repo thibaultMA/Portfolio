@@ -16,6 +16,7 @@ if (screen.width < 314) {
 
 let btnNavs = document.querySelectorAll('.icon')
 let nav = document.querySelector('.decepir')
+let navChild = nav.children
 let navfond = document.querySelector('.navfond')
 
 btnNavs.forEach(btnNav => {
@@ -23,12 +24,17 @@ btnNavs.forEach(btnNav => {
         console.log("efef");
         nav.classList.toggle('nav')
         navfond.classList.toggle('nav')
-        console.log(nav);
-        console.log(navfond);
-    })
+    })    
 });
+console.log(navChild);
+for (let i = 0; i < navChild.length; i++) {
+    const element = navChild[i];
+    element.addEventListener('click',()=>{
+        nav.classList.remove('nav')
+        navfond.classList.remove('nav')
+    })
+}
 navfond.addEventListener('click',()=>{
     nav.classList.toggle('nav')
     navfond.classList.toggle('nav')
-
 })

@@ -205,7 +205,8 @@ header {
             // border-left: solid var(--fontWhite);
             flex-flow: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-evenly;
+            transition: 1s;
             ul{
                 flex-flow: column;
                 // height: 50%;

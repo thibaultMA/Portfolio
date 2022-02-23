@@ -721,10 +721,13 @@ main footer {
 
 #projets .boxliste .definProjet .descriptionProjet .iconProjet {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #projets .boxliste .definProjet .descriptionProjet .iconProjet .link {
-  z-index: 2;
+  display: block;
 }
 
 #projets .boxliste .definProjet .descriptionProjet .imgGithub {
@@ -732,7 +735,7 @@ main footer {
 }
 
 #projets .boxliste .definProjet img {
-  width: 10%;
+  width: 50%;
 }
 
 @media (max-width: 639px) {

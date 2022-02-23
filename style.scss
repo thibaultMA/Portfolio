@@ -480,8 +480,9 @@ main {
                 }
                 .iconProjet{
                     position: relative;
+                    display: flex;
                     .link{
-                        z-index: 2;
+                        display: block;
                       }
                 }
                 .imgGithub{
@@ -489,7 +490,7 @@ main {
                   }
             }
             img{
-                width: 10%;
+                width: 50%;
             }
             @media (max-width: 639px){
                 order: 2;

@@ -21,12 +21,13 @@ let navfond = document.querySelector('.navfond')
 
 btnNavs.forEach(btnNav => {
     btnNav.addEventListener('click',()=>{
-        console.log("efef");
+        
+
         nav.classList.toggle('nav')
         navfond.classList.toggle('nav')
     })    
 });
-console.log(navChild);
+
 for (let i = 0; i < navChild.length; i++) {
     const element = navChild[i];
     element.addEventListener('click',()=>{

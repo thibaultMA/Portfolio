@@ -124,7 +124,7 @@
                             </div>
                         </div>
 
-                        <div class="boxProjet">
+                        <div class="boxProjet"> 
                             <h3 class="typeProjet" v-on:click="typeProjet('formations')"
                                 :class="{'fucusType' : categoriProjet === 'formations'  }">Formations</h3>
                             <h3 class="typeProjet" v-on:click="typeProjet('perso')"
@@ -251,55 +251,54 @@
                     function voirla() {
 
                         let typewriter = new Typewriter(annimText, {
-                            deleteSpeed: 0,
-                            delay: 0,
+                            deleteSpeed: 40,
+                            delay: 70,
                         })
                         typewriter
                             .pasteString(nomMachine)
-                            // .pauseFor(2000)
+                            .pauseFor(2000)
                             // .changeDelay
                             .typeString('Développeur Web ')
                             .typeString(' ')
-                            // .pauseFor(300)
-                            // .pauseFor(150)
+                            .pauseFor(150)
                             .typeString(" un peu <strong class='focusText'>FRONT END</strong>")
-                            // .pauseFor(600)
+                            .pauseFor(600)
                             .deleteChars(17)
                             .typeString(" un peu <strong  class='focusText'>BACK END</strong>")
-                            // .pauseFor(600)
+                            .pauseFor(600)
                             .deleteChars(17)
-                            .typeString(" Bref un peu <strong  class='focusText' > FULL STACK</strong> <br>")
+                            .typeString(" bref un peu <strong  class='focusText' > FULL STACK</strong> <br>")
                             .pasteString(nomMachine)
-                            // .pauseFor(2000)
-                            // .pauseFor(300)
+                            .pauseFor(2000)
+                            .pauseFor(300)
                             .typeString('Retrouvez sur ce site,')
                             .typeString('<br>')
                             .pasteString(nomMachine)
-                            // .pauseFor(300)
+                            .pauseFor(300)
 
                             .typeString("<strong class='focusText'> les projets </strong> ")
-                            // .pauseFor(300)
+                            .pauseFor(300)
                             .typeString(" qui ont fait de moi")
-                            // .pauseFor(300)
+                            .pauseFor(300)
 
                             .typeString(' le développeur que je suis aujourd\'hui')
                             // .pauseFor(300)
                             .typeString('<br>')
                             .pasteString(nomMachine)
-                            // .pauseFor(2000)
+                            .pauseFor(2000)
                             .typeString("N\'hésitez pas à me contacter <a href='#contact' class='focusText' ><strong class='focusText'>ICI</strong></a><br>")
                             .pasteString(nomMachine)
-                            // .pauseFor(700)
+                            .pauseFor(700)
                             .typeString('pour simplement discuter')
-                            // .pauseFor(500)
+                            .pauseFor(500)
                             .typeString(' ou pour toutes questions sur mon profil <br>')
 
                             .pasteString(nomMachine)
-                            // .pauseFor(1000)
+                            .pauseFor(700)
                             .typeString(' Merci ')
-                            // .pauseFor(500)
+                            .pauseFor(500)
                             .typeString(' et ')
-                            // .pauseFor(300)
+                            .pauseFor(300)
                             .typeString('bonne visite !<br>')
                             .pasteString(nomMachine)
                             .start();

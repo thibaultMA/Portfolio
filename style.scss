@@ -59,7 +59,8 @@
         --onglet:#272727;
 
         --fontWhite:#ffffff;
-        --box:#202325;
+        --box:#303336;
+        // --box:#202325;
         --focusTexte:#6b96ca;
 
 }
@@ -311,7 +312,7 @@ main {
                     @media (max-width: 707px){
                         width: 28%;
                     }
-                    @media (max-width: 423px){
+                    @media (max-width: 425px){
                         width: 100%;
                     }
                 }
@@ -328,7 +329,7 @@ main {
                     @media (max-width: 707px){
                         width: 6%;
                     }
-                    @media (max-width: 423px){
+                    @media (max-width: 425px){
                         display: none;
                     }
                 }  
@@ -345,6 +346,9 @@ main {
                 }
                 &:hover{
                     opacity: 0.8;
+                }
+                @media (max-width: 425px) {
+                    display: none;
                 }
             }  
         }
@@ -389,6 +393,10 @@ main {
             }
             @media (max-width: 426px) {
                 height: 246px;
+            }
+            @media (max-width: 426px) {
+                margin:10px auto;
+                width: 97% ;
             }
 
         }
@@ -483,7 +491,7 @@ main {
                     display: flex;
                     .link{
                         display: block;
-                      }
+                    }
                 }
                 .imgGithub{
                     float: right;
@@ -491,6 +499,15 @@ main {
             }
             img{
                 width: 50%;
+                @media (max-width: 1205px){
+                    width: 70%;
+                }
+                @media (max-width: 483px){
+                    width: 80%;
+                }
+                @media (max-width: 414px){
+                    width: 100%;
+                }
             }
             @media (max-width: 639px){
                 order: 2;

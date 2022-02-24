@@ -90,7 +90,7 @@
   --dark:#000;
   --onglet:#272727;
   --fontWhite:#ffffff;
-  --box:#202325;
+  --box:#303336;
   --focusTexte:#6b96ca;
 }
 
@@ -451,7 +451,7 @@ main footer {
   }
 }
 
-@media (max-width: 423px) {
+@media (max-width: 425px) {
   .profil .fenettre .barre .barreTop .onglet {
     width: 100%;
   }
@@ -481,7 +481,7 @@ main footer {
   }
 }
 
-@media (max-width: 423px) {
+@media (max-width: 425px) {
   .profil .fenettre .barre .barreTop .ajout {
     display: none;
   }
@@ -503,6 +503,12 @@ main footer {
 
 .profil .fenettre .barre .btnPage:hover {
   opacity: 0.8;
+}
+
+@media (max-width: 425px) {
+  .profil .fenettre .barre .btnPage {
+    display: none;
+  }
 }
 
 .profil .fenettre .textPresentation {
@@ -572,6 +578,13 @@ main footer {
 @media (max-width: 426px) {
   .profil .fenettre .textPresentation {
     height: 246px;
+  }
+}
+
+@media (max-width: 426px) {
+  .profil .fenettre .textPresentation {
+    margin: 10px auto;
+    width: 97%;
   }
 }
 
@@ -736,6 +749,24 @@ main footer {
 
 #projets .boxliste .definProjet img {
   width: 50%;
+}
+
+@media (max-width: 1205px) {
+  #projets .boxliste .definProjet img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 483px) {
+  #projets .boxliste .definProjet img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 414px) {
+  #projets .boxliste .definProjet img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 639px) {

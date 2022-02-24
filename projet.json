@@ -3,7 +3,7 @@
     "technos":[
         {"nom": "HTML",     "image": "img/technos/html.svg"     ,"site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
         {"nom": "CSS",      "image": "img/technos/css.svg"      ,"site":"https://developer.mozilla.org/fr/docs/Web/CSS" },
-        {"nom":"ejs",       "image":"img/technos/ejs.svg"       ,"site":"https://ejs.co/"},
+        {"nom":"EJS",       "image":"img/technos/ejs.svg"       ,"site":"https://ejs.co/"},
         {"nom":"JavaScript","image":"img/technos/js.svg"        ,"site":"https://www.javascript.com/"},
         {"nom":"NodeJs",    "image":"./img/technos/nodeJs.svg"  ,"site":"https://nodejs.org/fr/"},
         {"nom":"VueJs",     "image":"img/technos/vue.svg"       ,"site":"https://fr.vuejs.org/index.html"},
@@ -34,7 +34,7 @@
                 {"nom": "CSS",  "url": "img/technos/css.svg","site":"https://developer.mozilla.org/fr/docs/Web/CSS" },
                 {"nom": "PSD",  "url": "img/technos/psd.svg"}
             ],
-            "text": "Réalisation d’une maquette et d’animations en CSS à partir d’un support ",
+            "text": "Réalisation d’une maquette et d’animations en CSS à partir d’un support pour un site d'avis gastronomique",
             "github":"https://github.com/thibaultMA/MArie-Angelique_03_05012021"
         },{
             "id":2,
@@ -43,7 +43,7 @@
             "techno":[
                 {"nom":"Chrome DevTools","url":"img/technos/chrome.svg","site":""}
             ],
-            "text": "Optimiser un site web existant (SEO)",
+            "text": "Optimisation d'un site web existant (SEO)",
             "github":"https://github.com/thibaultMA/Marie-Angelique_04_12022021"
         },{
             "id":3,
@@ -51,7 +51,7 @@
             "image": "img/maquettes/formation/Orinoco/Capture1.PNG",
             "techno":[
                 {"nom":"NodeJs","url":"img/technos/nodeJs.svg","site":"https://nodejs.org/fr/"},
-                {"nom":"ejs","url":"img/technos/ejs.svg","site":"https://ejs.co/"}
+                {"nom":"EJS","url":"img/technos/ejs.svg","site":"https://ejs.co/"}
             ],
             "text": "Construction d'un site de E-commerce via le traitement des données renvoyées par une API",
             "github":"https://github.com/thibaultMA/Marie-Angelique_05_08032021"
@@ -63,7 +63,7 @@
                 {"nom":"NodeJs",    "url":"img/technos/nodeJs.svg","site":"https://nodejs.org/fr/"},
                 {"nom":"MongoDB",   "url":"img/technos/mongo.svg","site":"https://www.mongodb.com/"}
             ],
-            "text": "Creation une API securisé qui permet aux utilisateurs d'ajouter leurs sauces préférées et liker ou disliker les sauces proposées par les autres.",
+            "text": "Création d'une API securisée qui permet aux utilisateurs d'ajouter leurs sauces préférées, de liker ou disliker celles proposées par d'autres.",
             "github":"https://github.com/thibaultMA/Marie-Angelique_06_03062021"
             
         },{
@@ -75,9 +75,8 @@
                 {"nom":"VueJs", "url":"img/technos/vue.svg","site":"https://fr.vuejs.org/index.html"},
                 {"nom":"MySQL", "url":"img/technos/mysql.svg","site":"https://www.mysql.com/fr/"}
             ],
-            "text": "Creation d'un backend et d'un front end pour un reseau social d'entreprise",
+            "text": "Création d'un backend et d'un frontend pour un réseau social d'entreprise",
             "github":"https://github.com/thibaultMA/Marie-Angelique_07_30062021"
-            
         }
     ],
     "perso":[
@@ -89,17 +88,17 @@
                 {"nom":"HTML","url":"img/technos/html.svg"},
                 {"nom":"CSS","url":"img/technos/css.svg"}
             ],
-            "text": "Première realisation de site pour decouvrir/debuté en HTML & CSS",
+            "text": "Première réalisation de site pour découvrir/debuté en HTML & CSS",
             "github":""
         },{
             "id":1,
             "nom": "Estia",
             "image": "img/maquettes/perso/progress.jpg",
             "techno":[],
-            "text": "Jeu d'exploration et de strategie en ligne sur navigateur",
+            "text": "Jeu d'éxploration et de stratégie en ligne sur navigateur",
             "github":""
         },{
-            "id":5,
+            "id":2,
             "nom": "redimensize",
             "image": "img/maquettes/perso/redimention/Capture.PNG",
             "techno":[
@@ -107,7 +106,7 @@
                 {"nom":"VueJs", "url":"img/technos/vue.svg","site":"https://fr.vuejs.org/index.html"},
                 {"nom":"MongoDB",   "url":"img/technos/mongo.svg","site":"https://www.mongodb.com/"}
             ],
-            "text": "Outils permetant de redimentioner la taille en pixel d'une image ",
+            "text": "Outil permetant de redimentioner la taille d'une image en pixel ",
             "github":""
             
         }

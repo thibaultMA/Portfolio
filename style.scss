@@ -398,6 +398,15 @@ main {
                 margin:10px auto;
                 width: 97% ;
             }
+            @media (max-width: 426px) {
+                height: 268px;
+            }
+            @media (max-width: 309px) {
+                height: 286px;
+            }
+            @media (max-width: 306px) {
+                height: 308px;
+            }
 
         }
         @media (max-width: 425px) {

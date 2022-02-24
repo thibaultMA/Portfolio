@@ -588,6 +588,24 @@ main footer {
   }
 }
 
+@media (max-width: 426px) {
+  .profil .fenettre .textPresentation {
+    height: 268px;
+  }
+}
+
+@media (max-width: 309px) {
+  .profil .fenettre .textPresentation {
+    height: 286px;
+  }
+}
+
+@media (max-width: 306px) {
+  .profil .fenettre .textPresentation {
+    height: 308px;
+  }
+}
+
 @media (max-width: 425px) {
   .profil .fenettre {
     width: 100%;

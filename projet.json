@@ -75,7 +75,7 @@
                 {"nom":"VueJs", "url":"img/technos/vue.svg","site":"https://fr.vuejs.org/index.html"},
                 {"nom":"MySQL", "url":"img/technos/mysql.svg","site":"https://www.mysql.com/fr/"}
             ],
-            "text": "Création d'un backend et d'un frontend pour un réseau social d'entreprise.",
+            "text": "Création d'un back end et d'un front end pour un réseau social d'entreprise.",
             "github":"https://github.com/thibaultMA/Marie-Angelique_07_30062021"
         }
     ],

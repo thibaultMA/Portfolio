@@ -66,7 +66,7 @@
 }
 *{
     margin: 0;
-    
+    fill: #FFF;
 }
 body{
   
@@ -238,8 +238,7 @@ main {
     }
 }
 .sectionTitre {
-    text-align: center;
-    margin: 5px;
+    margin: 5px 13%;
 }
                     //profil
 .profil {
@@ -500,13 +499,17 @@ main {
                     display: flex;
                     .link{
                         display: block;
+                        width:-webkit-fill-available ;
                     }
                 }
                 .imgGithub{
                     float: right;
                   }
+                  @media (max-width: 639px){
+                      width: 90%;
+                  }
             }
-            img{
+            img,svg{
                 width: 50%;
                 @media (max-width: 1205px){
                     width: 70%;
@@ -523,9 +526,9 @@ main {
                 left: 0;
                 top: 0%;
                 width: 90%;
-                height: 150px;
+                height: 200px;
                 align-items: center;
-              }
+            }
         } 
         .boxProjet{
             position: relative;
@@ -599,14 +602,15 @@ main {
                     //experience
 .ExpBox{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    flex-flow: wrap;
     .exp{
-        width: 40%;
+        width: 31%;
+        min-width: 434px;
         margin: 1%;
         background-color: var(--box);
         border-radius:15px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
         .logoStructure{
             width:  25%;

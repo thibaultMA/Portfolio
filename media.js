@@ -1,8 +1,5 @@
 const loader = document.querySelector(".loader")
 const photoProjets = document.querySelectorAll(".photoProjet")
-const listTech = document.querySelector(".techlist")
-const technos = document.querySelector(".tech")
-const root = document.querySelector(":root")
 
 let annimText = document.querySelector('.textPresentation')
 

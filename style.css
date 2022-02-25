@@ -111,17 +111,18 @@ body a {
 }
 
 .navfond {
-  display: none;
+  position: absolute;
   z-index: 2;
-  height: 100vh;
-  width: 100vw;
-  background: var(--barre);
   opacity: 0.4;
 }
 
 .nav {
-  display: block;
+  background: var(--barre);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   position: fixed;
+  width: 100vw;
+  height: 100vh;
 }
 
 header {
@@ -202,12 +203,6 @@ header .hfond .decepir {
   }
 }
 
-@media (max-width: 768px) {
-  header .hfond .decepir {
-    display: none;
-  }
-}
-
 header .hfond .decepir ul {
   padding: 2px;
   display: -webkit-box;
@@ -250,6 +245,14 @@ header .hfond .decepir .contact {
   margin-left: auto;
 }
 
+@media (max-width: 926px) {
+  header .hfond .decepir .contact {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
 header .hfond .decepir .contact:hover {
   animation: hoverContact forwards reverse linear 0.2s;
   -webkit-transition: 0.2s;
@@ -258,11 +261,42 @@ header .hfond .decepir .contact:hover {
   text-align: center;
 }
 
-@media (max-width: 926px) {
+@media (max-width: 768px) {
+  header .hfond .decepir {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    width: 0px;
+    right: 0;
+    top: 0;
+    z-index: 4;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  header .hfond .decepir ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
   header .hfond .decepir .contact {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: 0;
   }
 }
 
@@ -273,42 +307,10 @@ header .hfond .navir {
 }
 
 header .hfond .nav {
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100vh;
   width: 60%;
   background: var(--box);
-  right: 0;
-  top: 0;
-  z-index: 4;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-header .hfond .nav ul {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-}
-
-header .hfond .nav .contact {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  margin: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 main {
@@ -335,6 +337,13 @@ main footer {
   margin: 5px 13%;
 }
 
+@media (max-width: 921px) {
+  .sectionTitre {
+    margin: 0;
+    text-align: center;
+  }
+}
+
 .profil {
   max-width: 1000px;
   width: 79%;
@@ -349,6 +358,19 @@ main footer {
   border-radius: 5px;
   position: relative;
   right: -4%;
+}
+
+@media (max-width: 614px) {
+  .profil {
+    width: 95%;
+    right: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .profil {
+    width: 100%;
+  }
 }
 
 .profil .matete {
@@ -377,6 +399,12 @@ main footer {
 
 .profil .fenettre {
   background: var(--box);
+}
+
+@media (max-width: 425px) {
+  .profil .fenettre {
+    width: 100%;
+  }
 }
 
 .profil .fenettre .barre {
@@ -419,20 +447,6 @@ main footer {
   border-left: solid 1px black;
 }
 
-.profil .fenettre .barre .barreTop .onglet .ongletNom {
-  margin: 8px;
-}
-
-.profil .fenettre .barre .barreTop .onglet .barreIcon {
-  height: 1.1rem;
-}
-
-@media (max-width: 489px) {
-  .profil .fenettre .barre .barreTop .onglet .croix {
-    display: none;
-  }
-}
-
 @media (max-width: 849px) {
   .profil .fenettre .barre .barreTop .onglet {
     width: 20%;
@@ -454,6 +468,20 @@ main footer {
 @media (max-width: 425px) {
   .profil .fenettre .barre .barreTop .onglet {
     width: 100%;
+  }
+}
+
+.profil .fenettre .barre .barreTop .onglet .ongletNom {
+  margin: 8px;
+}
+
+.profil .fenettre .barre .barreTop .onglet .barreIcon {
+  height: 1.1rem;
+}
+
+@media (max-width: 489px) {
+  .profil .fenettre .barre .barreTop .onglet .croix {
+    display: none;
   }
 }
 
@@ -520,21 +548,6 @@ main footer {
   position: relative;
   /* border: solid 1px; */
   overflow: hidden;
-}
-
-.profil .fenettre .textPresentation .Typewriter__wrapper {
-  font-family: 'Ubuntu', sans-serif;
-}
-
-.profil .fenettre .textPresentation .textPrefix {
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  color: var(--consoleText);
-}
-
-.profil .fenettre .textPresentation .focusText {
-  color: var(--focusTexte);
 }
 
 @media (max-width: 966px) {
@@ -606,23 +619,19 @@ main footer {
   }
 }
 
-@media (max-width: 425px) {
-  .profil .fenettre {
-    width: 100%;
-  }
+.profil .fenettre .textPresentation .Typewriter__wrapper {
+  font-family: 'Ubuntu', sans-serif;
 }
 
-@media (max-width: 614px) {
-  .profil {
-    width: 95%;
-    right: 0;
-  }
+.profil .fenettre .textPresentation .textPrefix {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  color: var(--consoleText);
 }
 
-@media (max-width: 425px) {
-  .profil {
-    width: 100%;
-  }
+.profil .fenettre .textPresentation .focusText {
+  color: var(--focusTexte);
 }
 
 .techlist {
@@ -651,6 +660,18 @@ main footer {
   min-width: min-content;
 }
 
+@media (max-width: 849px) {
+  .techlist .tech {
+    width: 14%;
+  }
+}
+
+@media (max-width: 707px) {
+  .techlist .tech {
+    width: 20%;
+  }
+}
+
 .techlist .tech a {
   background: var(--box);
   border-radius: 15px;
@@ -662,18 +683,6 @@ main footer {
 
 .techlist .tech .techNom {
   text-align: center;
-}
-
-@media (max-width: 849px) {
-  .techlist .tech {
-    width: 14%;
-  }
-}
-
-@media (max-width: 707px) {
-  .techlist .tech {
-    width: 20%;
-  }
 }
 
 #projets {
@@ -714,6 +723,16 @@ main footer {
   height: auto;
 }
 
+@media (max-width: 639px) {
+  #projets .boxliste {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    left: 0;
+  }
+}
+
 #projets .boxliste .definProjet {
   position: relative;
   border-radius: 20px;
@@ -728,6 +747,22 @@ main footer {
   height: 110%;
   width: 50%;
   background: var(--box);
+}
+
+@media (max-width: 639px) {
+  #projets .boxliste .definProjet {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    left: 0;
+    top: 0%;
+    width: 90%;
+    height: 200px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 2%;
+  }
 }
 
 #projets .boxliste .definProjet .descriptionProjet {
@@ -746,6 +781,12 @@ main footer {
           justify-content: space-evenly;
 }
 
+@media (max-width: 639px) {
+  #projets .boxliste .definProjet .descriptionProjet {
+    width: 90%;
+  }
+}
+
 #projets .boxliste .definProjet .descriptionProjet .defProjetNom {
   text-decoration: underline;
 }
@@ -760,16 +801,11 @@ main footer {
 #projets .boxliste .definProjet .descriptionProjet .iconProjet .link {
   display: block;
   width: -webkit-fill-available;
+  max-width: 25%;
 }
 
 #projets .boxliste .definProjet .descriptionProjet .imgGithub {
   float: right;
-}
-
-@media (max-width: 639px) {
-  #projets .boxliste .definProjet .descriptionProjet {
-    width: 90%;
-  }
 }
 
 #projets .boxliste .definProjet img, #projets .boxliste .definProjet svg {
@@ -794,25 +830,16 @@ main footer {
   }
 }
 
-@media (max-width: 639px) {
-  #projets .boxliste .definProjet {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    left: 0;
-    top: 0%;
-    width: 90%;
-    height: 200px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
 #projets .boxliste .boxProjet {
   position: relative;
   overflow: hidden;
   width: 60%;
+}
+
+@media (max-width: 639px) {
+  #projets .boxliste .boxProjet {
+    width: 80%;
+  }
 }
 
 #projets .boxliste .boxProjet .typeProjet {
@@ -892,22 +919,6 @@ main footer {
   margin: 0;
 }
 
-@media (max-width: 639px) {
-  #projets .boxliste .boxProjet {
-    width: 80%;
-  }
-}
-
-@media (max-width: 639px) {
-  #projets .boxliste {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    left: 0;
-  }
-}
-
 .ExpBox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -916,6 +927,18 @@ main footer {
       justify-content: space-around;
   -ms-flex-flow: wrap;
       flex-flow: wrap;
+}
+
+@media (max-width: 707px) {
+  .ExpBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .ExpBox .exp {
@@ -930,6 +953,19 @@ main footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 707px) {
+  .ExpBox .exp {
+    width: 80%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 509px) {
+  .ExpBox .exp {
+    width: 95%;
+  }
 }
 
 .ExpBox .exp .logoStructure {
@@ -959,30 +995,6 @@ main footer {
 
 .ExpBox .exp .expInfo .expDescription {
   word-wrap: auto;
-}
-
-@media (max-width: 707px) {
-  .ExpBox .exp {
-    width: 80%;
-  }
-}
-
-@media (max-width: 509px) {
-  .ExpBox .exp {
-    width: 95%;
-  }
-}
-
-@media (max-width: 707px) {
-  .ExpBox {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
 }
 
 #contact {
@@ -1020,6 +1032,7 @@ main footer {
 @media (max-width: 493px) {
   #contact .BoxContact {
     min-width: 90%;
+    height: auto;
   }
 }
 

@@ -110,16 +110,22 @@
                     <div class="boxliste">
                         <div class="definProjet" v-if="totalProjet !=0">
                             <div class="descriptionProjet">
-                                <h3 class="defProjetNom">{{projet[categoriProjet][first].nom}}</h3>
-                                <p class="defProjet">{{projet[categoriProjet][first].text}}</p>
-                                <div class="iconProjet">
-                                    <a  target="blank" v-for="tech in projet[categoriProjet][first].techno" :href="tech.site" class="link">
-                                        <img  :src="tech.url" class="technoProjet" :alt="tech.nom">
-                                    </a>
-                                    <a target="blank" :href="projet[categoriProjet][first].github" v-if="projet[categoriProjet][first].github != '' " class=" link "> 
-                                        <img src="img/logo/github.svg" alt="github" class="technoProjet" :title="'lien vers '+projet[categoriProjet][first].nom" >
-                                    </a>
-                                </div>
+                                <Transition  name="fade-in" mode="out-in">
+                                    <h3 class="defProjetNom" :key="projet[categoriProjet][first].nom">{{projet[categoriProjet][first].nom}}</h3>
+                                </transition>
+                                <Transition name="fade-in" mode="out-in">
+                                    <p class="defProjet" :key="projet[categoriProjet][first].text">{{projet[categoriProjet][first].text}}</p>
+                                </transition>
+                                <Transition name="fade-in" mode="out-in">
+                                    <div class="iconProjet" :key="first">
+                                        <a  target="blank" v-for="tech in projet[categoriProjet][first].techno" :href="tech.site" class="link">
+                                            <img  :src="tech.url" class="technoProjet" :alt="tech.nom">
+                                        </a>
+                                        <a target="blank" :href="projet[categoriProjet][first].github" v-if="projet[categoriProjet][first].github != '' " class=" link "> 
+                                            <img src="img/logo/github.svg" alt="github" class="technoProjet" :title="'lien vers '+projet[categoriProjet][first].nom" >
+                                        </a>
+                                    </div>
+                                </transition>
                             </div>
                         </div>
 
@@ -261,55 +267,53 @@
                     function voirla() {
 
                         let typewriter = new Typewriter(annimText, {
-                            deleteSpeed: 40,
-                            delay: 70,
+                            deleteSpeed: 0,
+                            delay: 0,
                         })
                         typewriter
                             .pasteString(nomMachine)
                             .pauseFor(3000)
-                            // .changeDelay
-                            .typeString('Développeur Web ')
-                            .typeString(' ')
+                            .pasteString('Développeur Web ')
+                            .pasteString(' ')
                             .pauseFor(150)
-                            .typeString(" un peu <strong class='focusText'>FRONT END</strong>")
-                            .pauseFor(600)
-                            .deleteChars(17)
-                            .typeString(" un peu <strong  class='focusText'>BACK END</strong>")
-                            .pauseFor(600)
-                            .deleteChars(17)
-                            .typeString(" Bref un peu <strong  class='focusText' > FULL STACK</strong> <br>")
-                            .pasteString(nomMachine)
-                            // .pauseFor(2000)
+                            // .pasteString(" un peu <strong class='focusText'>FRONT END</strong>")
                             .pauseFor(700)
-                            .typeString('Retrouvez sur ce site')
-                            .typeString('<br>')
+                            // .deleteChars(17)
+                            // .pasteString(" un peu <strong  class='focusText'>BACK END</strong>")
+                            .pauseFor(700)
+                            // .deleteChars(17)
+                            .pasteString(" Bref un peu <strong  class='focusText' > FULL STACK</strong> <br>")
+                            .pasteString(nomMachine)
+                            .pauseFor(700)
+                            .pasteString('Retrouvez sur ce site')
+                            .pasteString('<br>')
                             .pasteString(nomMachine)
                             .pauseFor(300)
 
-                            .typeString("<strong class='focusText'> les projets </strong> ")
+                            .pasteString("<strong class='focusText'> les projets </strong> ")
                             .pauseFor(300)
-                            .typeString(" qui ont fait de moi")
+                            .pasteString(" qui ont fait de moi")
                             .pauseFor(300)
 
-                            .typeString(' le développeur que je suis aujourd\'hui')
+                            .pasteString(' le développeur que je suis aujourd\'hui')
                             // .pauseFor(300)
-                            .typeString('<br>')
-                            .pasteString(nomMachine)
-                            .pauseFor(2000)
-                            .typeString("N\'hésitez pas à me contacter <a href='#contact' class='focusText' ><strong class='focusText'>ICI</strong></a><br>")
+                            .pasteString('<br>')
                             .pasteString(nomMachine)
                             .pauseFor(700)
-                            .typeString('pour faire connaissance')
+                            .pasteString("N\'hésitez pas à me contacter <a href='#contact' class='focusText' ><strong class='focusText'>ICI</strong></a><br>")
+                            .pasteString(nomMachine)
+                            .pauseFor(700)
+                            .pasteString('pour faire connaissance')
                             .pauseFor(500)
-                            .typeString(' ou pour toutes questions sur mon profil <br>')
+                            .pasteString(' ou pour toutes questions sur mon profil <br>')
 
                             .pasteString(nomMachine)
                             .pauseFor(700)
-                            .typeString(' Merci ')
+                            .pasteString(' Merci ')
                             .pauseFor(500)
-                            .typeString(' et ')
+                            .pasteString(' et ')
                             .pauseFor(300)
-                            .typeString('bonne visite !<br>')
+                            .pasteString('bonne visite !<br>')
                             .pasteString(nomMachine)
                             .start();
                     }

@@ -267,53 +267,53 @@
                     function voirla() {
 
                         let typewriter = new Typewriter(annimText, {
-                            deleteSpeed: 0,
-                            delay: 0,
+                            deleteSpeed: 20,
+                            delay: 60,
                         })
                         typewriter
                             .pasteString(nomMachine)
                             .pauseFor(3000)
-                            .pasteString('Développeur Web ')
+                            .typeString('Développeur ')
                             .pasteString(' ')
                             .pauseFor(150)
-                            // .pasteString(" un peu <strong class='focusText'>FRONT END</strong>")
+                            .typeString(" un peu <strong class='focusText'>FRONT END</strong>")
                             .pauseFor(700)
-                            // .deleteChars(17)
-                            // .pasteString(" un peu <strong  class='focusText'>BACK END</strong>")
+                            .deleteChars(17)
+                            .typeString(" un peu <strong  class='focusText'>BACK END</strong>")
                             .pauseFor(700)
-                            // .deleteChars(17)
-                            .pasteString(" Bref un peu <strong  class='focusText' > FULL STACK</strong> <br>")
+                            .deleteChars(17)
+                            .typeString(" Bref un peu <strong  class='focusText' > FULL STACK</strong> <br>")
                             .pasteString(nomMachine)
                             .pauseFor(700)
-                            .pasteString('Retrouvez sur ce site')
-                            .pasteString('<br>')
+                            .typeString('Retrouvez sur ce site')
+                            .typeString('<br>')
                             .pasteString(nomMachine)
                             .pauseFor(300)
 
-                            .pasteString("<strong class='focusText'> les projets </strong> ")
+                            .typeString("<strong class='focusText'> les projets </strong> ")
                             .pauseFor(300)
-                            .pasteString(" qui ont fait de moi")
+                            .typeString(" qui ont fait de moi")
                             .pauseFor(300)
 
-                            .pasteString(' le développeur que je suis aujourd\'hui')
+                            .typeString(' le développeur que je suis aujourd\'hui')
                             // .pauseFor(300)
-                            .pasteString('<br>')
+                            .typeString('<br>')
                             .pasteString(nomMachine)
                             .pauseFor(700)
-                            .pasteString("N\'hésitez pas à me contacter <a href='#contact' class='focusText' ><strong class='focusText'>ICI</strong></a><br>")
+                            .typeString("N\'hésitez pas à me contacter <a href='#contact' class='focusText' ><strong class='focusText'>ICI</strong></a><br>")
                             .pasteString(nomMachine)
                             .pauseFor(700)
-                            .pasteString('pour faire connaissance')
+                            .typeString('pour faire connaissance')
                             .pauseFor(500)
-                            .pasteString(' ou pour toutes questions sur mon profil <br>')
+                            .typeString(' ou pour toutes questions sur mon profil <br>')
 
                             .pasteString(nomMachine)
                             .pauseFor(700)
-                            .pasteString(' Merci ')
+                            .typeString(' Merci ')
                             .pauseFor(500)
-                            .pasteString(' et ')
+                            .typeString(' et ')
                             .pauseFor(300)
-                            .pasteString('bonne visite !<br>')
+                            .typeString('bonne visite !<br>')
                             .pasteString(nomMachine)
                             .start();
                     }

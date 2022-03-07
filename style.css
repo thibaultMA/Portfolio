@@ -376,10 +376,35 @@ main footer {
 .profil .matete {
   position: absolute;
   width: 20%;
+  height: 93%;
   left: -15%;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 2% 0;
   border: #FFF solid;
-  border-radius: 50%;
+  border-radius: 65%;
+}
+
+@media (max-width: 1063px) {
+  .profil .matete {
+    height: 71%;
+    -o-object-position: 50% 26%;
+       object-position: 50% 26%;
+  }
+}
+
+@media (max-width: 915px) {
+  .profil .matete {
+    height: 52%;
+  }
+}
+
+@media (max-width: 785PX) {
+  .profil .matete {
+    height: 42%;
+    -o-object-position: 50% 31%;
+       object-position: 50% 31%;
+  }
 }
 
 @media (max-width: 614px) {
@@ -388,6 +413,8 @@ main footer {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+    border-radius: 25%;
+    width: 30%;
   }
 }
 

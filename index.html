@@ -15,7 +15,8 @@
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script type="module" src="media.js"></script>
 
-
+    <!-- json lecture ok -->
+    <!-- gerer l'affichage en vuejs -->
 
     <title>Thibault MARIE-ANGÉLIQUE</title>
 </head>
@@ -36,12 +37,12 @@
     <header>
         <section class="hfond">
             <h1 class="titre"><a href="#"> Thibault<br> MARIE-ANGÉLIQUE</a></h1>
-            <div class="icon"></div> 
+            <div class="icon"></div>
 
             <div class="decepir">
                 <ul>
                     <li><a href="#aPropos">À PROPOS</a></li>
-                    <li><a href="#Competences">COMPÉTENCES</a></li>
+                    <li><a href="#Competences">COMPÉ \nTENCES</a></li>
                     <li><a href="#portfolio">PORTFOLIO</a></li>
                     <li><a href="#experience">ÉXPÉRIENCES</a></li>
 
@@ -56,7 +57,7 @@
     </aside>
     <main id="main">
         <section id="aPropos">
-                <h2 class="sectionTitre"> </h2>
+            <h2 class="sectionTitre"> </h2>
             <article class="profil">
 
                 <img class="matete" src="img/moi-modified.png" alt="tatete">
@@ -68,13 +69,14 @@
                                 <p class="ongletNom"> Terminal </p>
                                 <p class="croix">x</p>
                             </div>
-                            <a target="blank" href="https://www.linkedin.com/in/thibault-marie-ang%C3%A9lique" class="onglet fermer">
+                            <a target="blank" href="https://www.linkedin.com/in/thibault-marie-ang%C3%A9lique"
+                                class="onglet fermer">
                                 <img src="img/icon/linkedin.png" class="barreIcon" alt="LinkedIn">
                                 <p class="ongletNom"> LinkedIn </p>
                                 <p class="croix">x</p>
                             </a>
                             <a target="blank" href="https://github.com/thibaultMA" class="onglet fermer">
-                                <img src="img/logo/github.svg" alt="github"  class="barreIcon">
+                                <img src="img/logo/github.svg" alt="github" class="barreIcon">
                                 <p class="ongletNom"> Github </p>
                                 <p class="croix">x</p>
                             </a>
@@ -109,37 +111,63 @@
                     <h2 class="TitreProjet ">Projets</h2>
                     <div class="boxliste">
                         <div class="definProjet" v-if="totalProjet !=0">
+                            <!-- description du projet  -->
                             <div class="descriptionProjet">
-                                <Transition  name="fade-in" mode="out-in">
-                                    <h3 class="defProjetNom" :key="projet[categoriProjet][first].nom">{{projet[categoriProjet][first].nom}}</h3>
+                                <Transition name="fade-in" mode="out-in">
+                                    <h3 class="defProjetNom" :key="currentProjet[first].nom">
+                                        {{currentProjet[first].nom}}</h3>
                                 </transition>
                                 <Transition name="fade-in" mode="out-in">
-                                    <p class="defProjet" :key="projet[categoriProjet][first].text">{{projet[categoriProjet][first].text}}</p>
+                                    <p class="defProjet" :key="currentProjet[first].text">
+                                        {{currentProjet[first].text}}</p>
                                 </transition>
                                 <Transition name="fade-in" mode="out-in">
                                     <div class="iconProjet" :key="first">
-                                        <a  target="blank" v-for="tech in projet[categoriProjet][first].techno" :href="tech.site" class="link">
-                                            <img  :src="tech.url" class="technoProjet" :alt="tech.nom">
+                                        <a target="blank" v-for="tech in currentProjet[first].techno" :href="tech.site"
+                                            class="link">
+                                            <img :src="tech.url" class="technoProjet" :alt="tech.nom">
                                         </a>
-                                        <a target="blank" :href="projet[categoriProjet][first].github" v-if="projet[categoriProjet][first].github != '' " class=" link "> 
-                                            <img src="img/logo/github.svg" alt="github" class="technoProjet" :title="'lien vers '+projet[categoriProjet][first].nom" >
+                                        <a target="blank" :href="currentProjet[first].github"
+                                            v-if="currentProjet[first].github != '' " class=" link ">
+                                            <img src="img/logo/github.svg" alt="github" class="technoProjet"
+                                                :title="'lien vers '+currentProjet[first].nom">
                                         </a>
                                     </div>
                                 </transition>
                             </div>
                         </div>
+                        <!-- choix de la categorie a regarder -->
+                        <div class="boxProjet">
+                            <div class="choixNavProjet">
+                                <div class="choixNavEcole">
+                                    <h3 class="typeProjet typeFormation"
+                                        v-on:click="typeProjet('formations','Diginamic')"
+                                        :class="{'fucusType' : categoriProjet === 'Diginamic'||categoriProjet === 'Openclassrooms' }">
+                                        Formations</h3>
 
-                        <div class="boxProjet"> 
-                            <h3 class="typeProjet" v-on:click="typeProjet('formations')"
-                                :class="{'fucusType' : categoriProjet === 'formations'  }">Formations</h3>
-                            <h3 class="typeProjet" v-on:click="typeProjet('perso')"
-                                :class="{'fucusType' : categoriProjet === 'perso'  }">Personnels</h3>
+                                    <h3 class="typeProjet" v-on:click="typeProjet('formations','Diginamic')"
+                                        :class="{'fucusType' : categoriProjet === 'Diginamic'  }">Diginamic</h3>
 
-                            <img v-if="first != 0" class="btnclick btn_left" src="img/icon/arrow_left.svg" alt="" @click="decaleProjet(-1)">
-                            <img v-if="first != totalProjet-1" class="btnclick btn_right" src="img/icon/arrow_left.svg"alt="" @click="decaleProjet(1)">
+                                    <h3 class="typeProjet" v-on:click="typeProjet('formations','Openclassrooms')"
+                                        :class="{'fucusType' : categoriProjet === 'Openclassrooms'  }">Openclassrooms
+                                    </h3>
+                                </div>
+                                <h3 class="typeProjet" v-on:click="typeProjet('perso')"
+                                    :class="{'fucusType' : categoriProjet === 'perso'  }">Personnels</h3>
+                                <div>
+                                    <p></p>
+                                </div>
+
+                            </div>
+
+                            <img v-if="first != 0" class="btnclick btn_left" src="img/icon/arrow_left.svg" alt=""
+                                @click="decaleProjet(-1)">
+                            <img v-if="first != totalProjet-1" class="btnclick btn_right" src="img/icon/arrow_left.svg"
+                                alt="" @click="decaleProjet(1)">
 
                             <div class="projetList" :class="categoriProjet" :style="{left:- totalPX + 'px'}">
-                                <article v-for="(item,index) in projet[categoriProjet]" class="projet"
+                                <!-- boucle sur les current projets -->
+                                <article v-for="(item,index) in currentProjet" class="projet"
                                     :class="{'first' : first === index }">
                                     <img :src="item.image" :alt="item.nom" class="photoProjet"
                                         @click="projetCible(index)">
@@ -159,13 +187,14 @@
                             <h3 class="expstructure">OpenClassRoom's</h3>
                             <p class="expdate">2020 / 2021</p>
                             <p class="expNom">Développeur Web</p>
-                            <p class="expDescription">Formation en distanciel sur la création d'un site web, Apprentissage de plusieurs languages</p>
+                            <p class="expDescription">Formation en distanciel sur la création d'un site web,
+                                Apprentissage de plusieurs languages</p>
                             <p class="expNiveau">titre niveau 6 / Bac+2</p>
                         </div>
                     </article>
                     <article class="exp">
                         <img src="img/logo/LCF_logo.png" alt="LCF" class="logoStructure">
-                        <div class="expInfo">   
+                        <div class="expInfo">
                             <h3 class="expstructure">LCF Réseaux</h3>
                             <p class="expdate">2019 / 2020</p>
                             <p class="expNom">Technicien Fibre Optique</p>
@@ -174,7 +203,7 @@
                     </article>
                     <article class="exp">
                         <img src="img/logo/AES.jpg.crdownload" alt="AES" class="logoStructure">
-                        <div class="expInfo">   
+                        <div class="expInfo">
                             <h3 class="expstructure">Atlantique Électricité Service </h3>
                             <p class="expdate">2014 / 2016</p>
                             <p class="expNom">Apprenti électricien</p>
@@ -182,23 +211,25 @@
                             <p class="expNiveau">CAP PROElec</p>
                         </div>
                     </article>
-                </div>  
+                </div>
             </section>
-            
+
         </section>
     </main>
-    <footer >
+    <footer>
         <section id="contact">
             <h2 class="sectionTitre">contact</h2>
             <div class="BoxContact">
-                <a target="blank" href="mailto:thibault.m-a@outlook.com" class="contactLink"><img src="img/icon/email.png" alt="email"> Email</a>
+                <a target="blank" href="mailto:thibault.m-a@outlook.com" class="contactLink"><img
+                        src="img/icon/email.png" alt="email"> Email</a>
                 <a target="blank" href="CV_thibault.pdf" class="contactLink"><img src="img/icon/cv.png" alt="cv"> CV</a>
-                <a target="blank" href="https://www.linkedin.com/in/thibault-marie-ang%C3%A9lique" class="contactLink"><img src="img/icon/linkedin.png" alt="LinkedIn"> LinkedIn</a>
+                <a target="blank" href="https://www.linkedin.com/in/thibault-marie-ang%C3%A9lique"
+                    class="contactLink"><img src="img/icon/linkedin.png" alt="LinkedIn"> LinkedIn</a>
                 <a target="blank" href="https://github.com/thibaultMA" class="contactLink">
                     <img src="img/logo/github.svg" alt="github">
                     Github
                 </a>
-                
+
             </div>
             <!-- email linkedin github cv -->
         </section>
@@ -208,7 +239,7 @@
             el: "#vue",
             data() {
                 return {
-                    categoriProjet: 'formations',
+                    categoriProjet: 'Diginamic',
                     affiche: false,
 
                     first: 0,
@@ -216,7 +247,7 @@
                     decalePX: [],
                     totalPX: 0,
                     totalProjet: 0,
-
+                    currentProjet: null,
                     projet: {}
                 }
             },
@@ -226,15 +257,21 @@
                     let f = n - this.first
                     this.decaleProjet(f)
                 },
-                typeProjet(type) {
+                typeProjet(type, ecole) {
 
                     this.nbrProj = 0
                     this.first = 0
-                    this.categoriProjet = type
                     this.decalePX = []
                     this.totalPX = 0
                     this.totalProjet = 0
-                    this.totalProjet = this.projet[this.categoriProjet].length
+                    this.categoriProjet = ecole ? ecole : type
+                    if (ecole) {
+                        this.currentProjet = this.projet[type][ecole]
+                    } else {
+                        this.currentProjet = this.projet[type]
+                    }
+
+                    this.totalProjet = this.currentProjet.length
                 },
                 decaleProjet(direction) {
                     if ((direction == -1 && this.first == 0) || direction == 1 && this.first == this.totalProjet - 1) {// depasse pas les bord
@@ -250,8 +287,8 @@
                     if (direction == -1) {
 
                         this.decalePX.pop()
-                        let o = this.decalePX.reduce((acc, cur) => acc + cur, 0);
-                        this.totalPX = o
+                        let decalage = this.decalePX.reduce((acc, cur) => acc + cur, 0);
+                        this.totalPX = decalage
                     }
                 },
                 endLoad() {
@@ -323,18 +360,18 @@
                 fetch('projet.json')
                     .then(response => response.json())
                     .then(data => {
-                        let Ndata = {}
-                        for (const key in data) {
-                            if (key == "technos") {
-                                Ndata[key] = data[key]
-                            } else
-                                Ndata[key] = data[key].slice().reverse()
+                        let { formations, perso, technos } = data
+                        perso.reverse()
+                        for (const key in formations) {
+                            formations[key].reverse()
                         }
-                        return Ndata
+                        return data
                     })
                     .then(p => {
+
                         this.projet = p
-                        this.totalProjet = this.projet[this.categoriProjet].length
+                        this.currentProjet = this.projet.formations[this.categoriProjet]
+                        this.totalProjet = this.projet.formations[this.categoriProjet].length
                         this.endLoad()
                     })
             },
@@ -345,4 +382,5 @@
         })
     </script>
 </body>
+
 </html>

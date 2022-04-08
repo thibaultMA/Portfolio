@@ -886,14 +886,36 @@ main footer {
   }
 }
 
-#projets .boxliste .boxProjet .typeProjet {
+#projets .boxliste .boxProjet .choixNavProjet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#projets .boxliste .boxProjet .choixNavProjet .choixNavEcole {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  width: 50%;
+  border-right: var(--fontWhite) 5px solid;
+}
+
+#projets .boxliste .boxProjet .choixNavProjet .choixNavEcole .typeFormation {
+  text-align: center;
+  width: 100%;
+  border-bottom: var(--fontWhite) 1px solid;
+}
+
+#projets .boxliste .boxProjet .choixNavProjet .typeProjet {
   cursor: pointer;
   /* color: var(--dark); */
   display: inline-block;
   margin: auto;
 }
 
-#projets .boxliste .boxProjet .fucusType {
+#projets .boxliste .boxProjet .choixNavProjet .fucusType {
   color: var(--mainColor);
 }
 
@@ -1014,9 +1036,6 @@ main footer {
 
 .ExpBox .exp .logoStructure {
   width: 25%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
 .ExpBox .exp .expInfo {

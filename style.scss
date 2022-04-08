@@ -583,16 +583,31 @@ main {
                 display: flex;
                 flex-flow: wrap;
             }
-            .typeProjet {
-                cursor: pointer;
-                /* color: var(--dark); */
-                display: inline-block;
-                margin:auto;
-                
+            .choixNavProjet{
+                display: flex;
+                .choixNavEcole{
+                    display: flex;
+                    flex-flow: wrap;
+                    width: 50%;
+                    border-right: var(--fontWhite) 5px solid;
+                    .typeFormation{
+                        text-align: center;
+                        width: 100%;
+                        border-bottom: var(--fontWhite) 1px solid;
+                    }
+                }
+                .typeProjet {
+                    cursor: pointer;
+                    /* color: var(--dark); */
+                    display: inline-block;
+                    margin:auto;
+                    
+                }
+                .fucusType{
+                    color: var(--mainColor);
+                }
             }
-            .fucusType{
-                color: var(--mainColor);
-            }
+            
             .btnclick{
                 position: absolute; 
                 top: 45%;
@@ -669,7 +684,7 @@ main {
         }
         .logoStructure{
             width:  25%;
-            height: fit-content;
+            // height: fit-content;
         }
         
         .expInfo{

@@ -84,7 +84,7 @@
             {
                 "id":0,
                 "nom": "TP 01 html",
-                "image": "./img/maquettes/formation/Diginamic/html/tp01-html.PNG",
+                "image": "img/maquettes/formation/diginamic/html/tp01-html.PNG",
                 "techno":[
                     {"nom": "HTML", "url": "img/technos/html.svg","site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
                     {"nom": "CSS",  "url": "img/technos/css.svg","site":"https://developer.mozilla.org/fr/docs/Web/CSS"},
@@ -96,7 +96,7 @@
             {
                 "id":0,
                 "nom": "TP 01 JS",
-                "image": "./img/maquettes/formation/Diginamic/js/tp-01.js.PNG",
+                "image": "img/maquettes/formation/diginamic/js/tp-01.js.PNG",
                 "techno":[
                     {"nom": "HTML", "url": "img/technos/html.svg","site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
                     {"nom": "CSS",  "url": "img/technos/css.svg","site":"https://developer.mozilla.org/fr/docs/Web/CSS"},

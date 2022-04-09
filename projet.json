@@ -92,10 +92,20 @@
                 ],
                 "text": "realisation d'une maquette a partir de figma",
                 "github":"https://github.com/thibaultMA/tp-01-html"
-            },
-            {
-                "id":0,
+            },{
+                "id":1,
                 "nom": "TP 01 JS",
+                "image": "img/maquettes/formation/diginamic/js/tp-01.js.PNG",
+                "techno":[
+                    {"nom": "HTML", "url": "img/technos/html.svg","site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
+                    {"nom": "CSS",  "url": "img/technos/css.svg","site":"https://developer.mozilla.org/fr/docs/Web/CSS"},
+                    {"nom":"JavaScript","url":"img/technos/js.svg","site":"https://www.javascript.com/"}
+                ],
+                "text": "Création d'un site de recherche de film en relation avec une api (tp en groupe)",
+                "github":"https://github.com/thibaultMA/Application-web-de-recherche-de-films/tree/main"
+            },{
+                "id":2,
+                "nom": "TP 05 Node",
                 "image": "img/maquettes/formation/diginamic/js/tp-01.js.PNG",
                 "techno":[
                     {"nom": "HTML", "url": "img/technos/html.svg","site":"https://developer.mozilla.org/fr/docs/Web/HTML"},

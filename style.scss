@@ -584,24 +584,23 @@ main {
                 flex-flow: wrap;
             }
             .choixNavProjet{
-                display: flex;
-                .choixNavEcole{
+                display: flex;      
+                flex-flow: column;
+
+                width: 100%;
+                margin: auto;   
+                .choix{
                     display: flex;
-                    flex-flow: wrap;
-                    width: 50%;
-                    border-right: var(--fontWhite) 5px solid;
-                    .typeFormation{
-                        text-align: center;
-                        width: 100%;
-                        border-bottom: var(--fontWhite) 1px solid;
-                    }
+                    justify-content: space-evenly;
+                    
+                }     
+                .choixClasse{
+                    margin-top: 10px;
+                    padding-top: 10px;
+                    border-top: solid;
                 }
                 .typeProjet {
                     cursor: pointer;
-                    /* color: var(--dark); */
-                    display: inline-block;
-                    margin:auto;
-                    
                 }
                 .fucusType{
                     color: var(--mainColor);

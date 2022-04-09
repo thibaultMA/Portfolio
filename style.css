@@ -890,29 +890,31 @@ main footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 100%;
+  margin: auto;
 }
 
-#projets .boxliste .boxProjet .choixNavProjet .choixNavEcole {
+#projets .boxliste .boxProjet .choixNavProjet .choix {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
-  width: 50%;
-  border-right: var(--fontWhite) 5px solid;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-#projets .boxliste .boxProjet .choixNavProjet .choixNavEcole .typeFormation {
-  text-align: center;
-  width: 100%;
-  border-bottom: var(--fontWhite) 1px solid;
+#projets .boxliste .boxProjet .choixNavProjet .choixClasse {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: solid;
 }
 
 #projets .boxliste .boxProjet .choixNavProjet .typeProjet {
   cursor: pointer;
-  /* color: var(--dark); */
-  display: inline-block;
-  margin: auto;
 }
 
 #projets .boxliste .boxProjet .choixNavProjet .fucusType {

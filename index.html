@@ -139,27 +139,27 @@
                         <!-- choix de la categorie a regarder -->
                         <div class="boxProjet">
                             <div class="choixNavProjet">
-                                <div class="choixNavEcole">
+                                <div class="choix">
+                                    <!-- choix formation -->
                                     <h3 class="typeProjet typeFormation"
                                         v-on:click="typeProjet('formations','Diginamic')"
                                         :class="{'fucusType' : categoriProjet === 'Diginamic'||categoriProjet === 'Openclassrooms' }">
                                         Formations</h3>
-
+                                    <!-- choix perso-->
+                                    <h3 class="typeProjet" v-on:click="typeProjet('perso')"
+                                        :class="{'fucusType' : categoriProjet === 'perso'  }">Personnels</h3>
+                                </div>
+                                <div class="choix choixClasse"
+                                    v-if="categoriProjet == 'Diginamic' || categoriProjet == 'Openclassrooms'">
+                                    <!-- choix Diginamic -->
                                     <h3 class="typeProjet" v-on:click="typeProjet('formations','Diginamic')"
                                         :class="{'fucusType' : categoriProjet === 'Diginamic'  }">Diginamic</h3>
-
+                                    <!-- choix opcr -->
                                     <h3 class="typeProjet" v-on:click="typeProjet('formations','Openclassrooms')"
                                         :class="{'fucusType' : categoriProjet === 'Openclassrooms'  }">Openclassrooms
                                     </h3>
                                 </div>
-                                <h3 class="typeProjet" v-on:click="typeProjet('perso')"
-                                    :class="{'fucusType' : categoriProjet === 'perso'  }">Personnels</h3>
-                                <div>
-                                    <p></p>
-                                </div>
-
                             </div>
-
                             <img v-if="first != 0" class="btnclick btn_left" src="img/icon/arrow_left.svg" alt=""
                                 @click="decaleProjet(-1)">
                             <img v-if="first != totalProjet-1" class="btnclick btn_right" src="img/icon/arrow_left.svg"

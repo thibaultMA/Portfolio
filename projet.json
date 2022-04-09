@@ -105,15 +105,14 @@
                 "github":"https://github.com/thibaultMA/Application-web-de-recherche-de-films/tree/main"
             },{
                 "id":2,
-                "nom": "TP 05 Node",
-                "image": "img/maquettes/formation/diginamic/js/tp-01.js.PNG",
+                "nom": "TP 05 Nodejs",
+                "image": "img/maquettes/formation/diginamic/node/tp05_node.PNG",
                 "techno":[
-                    {"nom": "HTML", "url": "img/technos/html.svg","site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
-                    {"nom": "CSS",  "url": "img/technos/css.svg","site":"https://developer.mozilla.org/fr/docs/Web/CSS"},
-                    {"nom":"JavaScript","url":"img/technos/js.svg","site":"https://www.javascript.com/"}
+                    {"nom":"NodeJs",    "url":"img/technos/nodeJs.svg"  ,"site":"https://nodejs.org/fr/"},
+                    {"nom":"EJS",       "url":"img/technos/ejs.svg"       ,"site":"https://ejs.co/"}
                 ],
-                "text": "Création d'un site de recherche de film en relation avec une api (tp en groupe)",
-                "github":"https://github.com/thibaultMA/Application-web-de-recherche-de-films/tree/main"
+                "text": "Création d'un IHM de chat en temps réel via socket.io",
+                "github":"https://github.com/thibaultMA/tp_05_nodejs"
             }
         ]
     },

@@ -79,41 +79,6 @@
                 "text": "Création d'un back end et d'un front end pour un réseau social d'entreprise.",
                 "github":"https://github.com/thibaultMA/Marie-Angelique_07_30062021"
             }
-        ],
-        "Diginamic":[
-            {
-                "id":0,
-                "nom": "TP 01 html",
-                "image": "img/maquettes/formation/diginamic/html/tp01-html.PNG",
-                "techno":[
-                    {"nom": "HTML", "url": "img/technos/html.svg","site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
-                    {"nom": "CSS",  "url": "img/technos/css.svg","site":"https://developer.mozilla.org/fr/docs/Web/CSS"},
-                    {"nom": "figma",  "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg","site":"https://www.figma.com/"}
-                ],
-                "text": "realisation d'une maquette a partir de figma",
-                "github":"https://github.com/thibaultMA/tp-01-html"
-            },{
-                "id":1,
-                "nom": "TP 01 JS",
-                "image": "img/maquettes/formation/diginamic/js/tp-01.js.PNG",
-                "techno":[
-                    {"nom": "HTML", "url": "img/technos/html.svg","site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
-                    {"nom": "CSS",  "url": "img/technos/css.svg","site":"https://developer.mozilla.org/fr/docs/Web/CSS"},
-                    {"nom":"JavaScript","url":"img/technos/js.svg","site":"https://www.javascript.com/"}
-                ],
-                "text": "Création d'un site de recherche de film en relation avec une api (tp en groupe)",
-                "github":"https://github.com/thibaultMA/Application-web-de-recherche-de-films/tree/main"
-            },{
-                "id":2,
-                "nom": "TP 05 Nodejs",
-                "image": "img/maquettes/formation/diginamic/node/tp05_node.PNG",
-                "techno":[
-                    {"nom":"NodeJs",    "url":"img/technos/nodeJs.svg"  ,"site":"https://nodejs.org/fr/"},
-                    {"nom":"EJS",       "url":"img/technos/ejs.svg"       ,"site":"https://ejs.co/"}
-                ],
-                "text": "Création d'un IHM de chat en temps réel via socket.io",
-                "github":"https://github.com/thibaultMA/tp_05_nodejs"
-            }
         ]
     },
     "perso":[
@@ -127,6 +92,17 @@
             ],
             "text": "Première réalisation de site en autodidacte pour apprendre HTML et CSS.",
             "github":""
+        },{
+            "id":3,
+            "nom": "Maquette",
+            "image": "img/maquettes/formation/diginamic/html/tp01-html.PNG",
+            "techno":[
+                {"nom": "HTML", "url": "img/technos/html.svg","site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
+                {"nom": "CSS",  "url": "img/technos/css.svg","site":"https://developer.mozilla.org/fr/docs/Web/CSS"},
+                {"nom": "figma",  "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg","site":"https://www.figma.com/"}
+            ],
+            "text": "realisation d'une maquette a partir de figma",
+            "github":"https://github.com/thibaultMA/tp-01-html"
         },{
             "id":1,
             "nom": "Estia",
@@ -145,6 +121,27 @@
             ],
             "text": "Outil permettant de redimensionner la taille d'une image en pixels.",
             "github":""
+        },{
+            "id":4,
+            "nom": "Film me moi",
+            "image": "img/maquettes/formation/diginamic/js/tp-01.js.PNG",
+            "techno":[
+                {"nom": "HTML", "url": "img/technos/html.svg","site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
+                {"nom": "CSS",  "url": "img/technos/css.svg","site":"https://developer.mozilla.org/fr/docs/Web/CSS"},
+                {"nom":"JavaScript","url":"img/technos/js.svg","site":"https://www.javascript.com/"}
+            ],
+            "text": "Création d'un site de recherche de film en relation avec une api (projet de groupe)",
+            "github":"https://github.com/thibaultMA/Application-web-de-recherche-de-films/tree/main"
+        },{
+            "id":5,
+            "nom": "Chat",
+            "image": "img/maquettes/formation/diginamic/node/tp05_node.PNG",
+            "techno":[
+                {"nom":"NodeJs",    "url":"img/technos/nodeJs.svg"  ,"site":"https://nodejs.org/fr/"},
+                {"nom":"EJS",       "url":"img/technos/ejs.svg"       ,"site":"https://ejs.co/"}
+            ],
+            "text": "Création d'un système de chat en temps réel via socket.io",
+            "github":"https://github.com/thibaultMA/tp_05_nodejs"
         }
     ]
 }

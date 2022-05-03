@@ -140,20 +140,18 @@
                         <div class="boxProjet">
                             <div class="choixNavProjet">
                                 <div class="choix">
-                                    <!-- choix formation -->
-                                    <h3 class="typeProjet typeFormation"
-                                        v-on:click="typeProjet('formations','Diginamic')"
-                                        :class="{'fucusType' : categoriProjet === 'Diginamic'||categoriProjet === 'Openclassrooms' }">
-                                        Formations</h3>
                                     <!-- choix perso-->
                                     <h3 class="typeProjet" v-on:click="typeProjet('perso')"
                                         :class="{'fucusType' : categoriProjet === 'perso'  }">Personnels</h3>
+                                    <!-- choix formation -->
+                                    <h3 class="typeProjet typeFormation"
+                                        v-on:click="typeProjet('formations','Openclassrooms')"
+                                        :class="{'fucusType' : categoriProjet === 'Diginamic'||categoriProjet === 'Openclassrooms' }">
+                                        Formations</h3>
+                                    
                                 </div>
                                 <div class="choix choixClasse"
                                     v-if="categoriProjet == 'Diginamic' || categoriProjet == 'Openclassrooms'">
-                                    <!-- choix Diginamic -->
-                                    <h3 class="typeProjet" v-on:click="typeProjet('formations','Diginamic')"
-                                        :class="{'fucusType' : categoriProjet === 'Diginamic'  }">Diginamic</h3>
                                     <!-- choix opcr -->
                                     <h3 class="typeProjet" v-on:click="typeProjet('formations','Openclassrooms')"
                                         :class="{'fucusType' : categoriProjet === 'Openclassrooms'  }">Openclassrooms
@@ -239,7 +237,7 @@
             el: "#vue",
             data() {
                 return {
-                    categoriProjet: 'Diginamic',
+                    categoriProjet: 'perso',
                     affiche: false,
 
                     first: 0,
@@ -360,18 +358,20 @@
                 fetch('projet.json')
                     .then(response => response.json())
                     .then(data => {
-                        let { formations, perso, technos } = data
+                        let { formations, perso } = data
                         perso.reverse()
+                        console.log(formations);
                         for (const key in formations) {
+                            console.log(formations[key]);
                             formations[key].reverse()
                         }
                         return data
                     })
-                    .then(p => {
+                    .then(proj => {
 
-                        this.projet = p
-                        this.currentProjet = this.projet.formations[this.categoriProjet]
-                        this.totalProjet = this.projet.formations[this.categoriProjet].length
+                        this.projet = proj
+                        this.currentProjet = this.projet[this.categoriProjet]
+                        this.totalProjet = this.projet[this.categoriProjet].length
                         this.endLoad()
                     })
             },

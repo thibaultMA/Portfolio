@@ -838,6 +838,7 @@ main footer {
   display: -ms-flexbox;
   display: flex;
   flex-flow: wrap;
+  
 }
 
 #projets .boxliste .definProjet .descriptionProjet .iconProjet .link {
@@ -852,6 +853,7 @@ main footer {
 
 #projets .boxliste .definProjet img, #projets .boxliste .definProjet svg {
   width: 50%;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 1205px) {

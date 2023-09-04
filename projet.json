@@ -14,7 +14,8 @@
         {"id":10,"nom": "Chrome DevTools"   ,"image": "img/technos/chrome.svg", "site":"https://developer.chrome.com/docs/","affiche":false},
         {"id":11,"nom": "Figma"             ,"image": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg","site":"https://www.figma.com/","affiche":false},
         {"id":12,"nom": "Spring"             ,"image": "img/technos/springio-icon.svg","site":"https://spring.io/","affiche":true},
-        {"id":13,"nom": "Postgresql"             ,"image": "img/technos/postgresql-icon.svg","site":"https://www.postgresql.org/","affiche":true}
+        {"id":13,"nom": "Postgresql"             ,"image": "img/technos/postgresql-icon.svg","site":"https://www.postgresql.org/","affiche":true},
+        {"id":14,"nom": "hibernate"             ,"image": "img/technos/hibernate-icon.svg","site":"https://hibernate.org/","affiche":true}
         
     ],
     "formations":{
@@ -113,7 +114,7 @@
             "id":0,
             "nom": "CGI // DGFIP",
             "image": "img/maquettes/pro/dgfip_eereg.PNG",
-            "techno":[8,3,12,13],
+            "techno":[8,3,12,13,14],
             "text": "Dématerialisation des déclaration de don et seccesion de droit sociaux",
             "site":"https://www.impots.gouv.fr/accueil"
 

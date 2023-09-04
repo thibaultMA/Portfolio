@@ -97,7 +97,7 @@
                 <h2 class="sectionTitre">Compétences</h2>
                 <article class="technoBox">
                     <div class="techlist">
-                        <div class="tech" v-for="item in projet.technos">
+                        <div class="tech" v-for="item in projet.technos" v-if="item.affiche === true">
                             <a target="blank" :href="item.site">
                                 <img class="logos" :src="item.image" :alt="item.nom" :title="item.nom">
                             </a>
@@ -123,13 +123,19 @@
                                 </transition>
                                 <Transition name="fade-in" mode="out-in">
                                     <div class="iconProjet" :key="first">
-                                        <a target="blank" v-for="tech in currentProjet[first].techno" :href="tech.site"
+                                        <a target="blank" v-for="tech in currentProjet[first].techno" :href="projet.technos[tech].site"
                                             class="link">
-                                            <img :src="tech.url" class="technoProjet" :alt="tech.nom">
+                                            
+                                            <img :src="projet.technos[tech].image" class="technoProjet" :alt="projet.technos[tech].nom">
                                         </a>
                                         <a target="blank" :href="currentProjet[first].github"
-                                            v-if="currentProjet[first].github != '' " class=" link ">
+                                            v-if="currentProjet[first].github != null " class=" link ">
                                             <img src="img/logo/github.svg" alt="github" class="technoProjet"
+                                                :title="'lien vers '+currentProjet[first].nom">
+                                        </a>
+                                        <a target="blank" :href="currentProjet[first].site"
+                                            v-if="currentProjet[first].site != null " class=" link ">
+                                            <img src="img/logo/impot_gouv.svg" alt="github" class="technoProjet"
                                                 :title="'lien vers '+currentProjet[first].nom">
                                         </a>
                                     </div>
@@ -144,6 +150,8 @@
                                     <h3 class="typeProjet" v-on:click="typeProjet('perso')"
                                         :class="{'fucusType' : categoriProjet === 'perso'  }">Personnels</h3>
                                     <!-- choix formation -->
+                                    <h3 class="typeProjet" v-on:click="typeProjet('pro')"
+                                        :class="{'fucusType' : categoriProjet === 'pro'  }">professionel</h3>
                                     <h3 class="typeProjet typeFormation"
                                         v-on:click="typeProjet('formations','Openclassrooms')"
                                         :class="{'fucusType' : categoriProjet === 'Diginamic'||categoriProjet === 'Openclassrooms' }">
@@ -180,6 +188,18 @@
                 <h2 class="sectionTitre">Expériences & Formations</h2>
                 <div class="ExpBox">
                     <article class="exp">
+                        <img src="img/logo/CGI_logo.png" alt="OpenClassRoom's" class="logoStructure">
+                        <div class="expInfo">
+                            <h3 class="expstructure">CGI</h3>
+                            <p class="expdate">2022 /2023</p>
+                            <p class="expNom">Concepteur Développeur d'application</p>
+                            <hr><br>
+                            <p class="expDescription">Formation en distanciel sur la création d'un site web,
+                                Apprentissage de plusieurs languages</p>
+                            <p class="expNiveau">Titre niveau 6 / Bac+4</p>
+                        </div>
+                    </article>
+                    <article class="exp">
                         <img src="img/logo/OpenClassrooms.png" alt="OpenClassRoom's" class="logoStructure">
                         <div class="expInfo">
                             <h3 class="expstructure">OpenClassRoom's</h3>
@@ -187,7 +207,7 @@
                             <p class="expNom">Développeur Web</p>
                             <p class="expDescription">Formation en distanciel sur la création d'un site web,
                                 Apprentissage de plusieurs languages</p>
-                            <p class="expNiveau">titre niveau 6 / Bac+2</p>
+                            <p class="expNiveau">Titre niveau 5 / Bac+2</p>
                         </div>
                     </article>
                     <article class="exp">
@@ -237,7 +257,9 @@
             el: "#vue",
             data() {
                 return {
-                    categoriProjet: 'perso',
+
+                    categoriProjet: 'pro',
+
                     affiche: false,
 
                     first: 0,
@@ -272,7 +294,7 @@
                     this.totalProjet = this.currentProjet.length
                 },
                 decaleProjet(direction) {
-                    if ((direction == -1 && this.first == 0) || direction == 1 && this.first == this.totalProjet - 1) {// depasse pas les bord
+                    if ((direction == -1 && this.first == 0) || direction == 1 && this.first == this.totalProjet - 1) {
 
                         direction = 0
                     }
@@ -358,20 +380,31 @@
                 fetch('projet.json')
                     .then(response => response.json())
                     .then(data => {
-                        let { formations, perso } = data
+
+                        let { formations, perso ,technos } = data
                         perso.reverse()
-                        console.log(formations);
+
                         for (const key in formations) {
-                            console.log(formations[key]);
+                            
                             formations[key].reverse()
                         }
                         return data
                     })
                     .then(proj => {
+                        this.projet = p
+                        
+                        switch (this.categoriProjet) {
+                            case "Diginamic" ||"Openclassrooms":
+                                this.currentProjet = this.projet.formations[this.categoriProjet]
+                                this.totalProjet = this.projet.formations[this.categoriProjet].length
+                                break;
+                        
+                            default:
+                                this.currentProjet = this.projet[this.categoriProjet]
+                                this.totalProjet = this.projet[this.categoriProjet].length
+                                break;
+                        }
 
-                        this.projet = proj
-                        this.currentProjet = this.projet[this.categoriProjet]
-                        this.totalProjet = this.projet[this.categoriProjet].length
                         this.endLoad()
                     })
             },

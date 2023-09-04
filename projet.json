@@ -1,15 +1,20 @@
  
 {   
     "technos":[
-        {"nom": "HTML",     "image": "img/technos/html.svg"     ,"site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
-        {"nom": "CSS",      "image": "img/technos/css.svg"      ,"site":"https://developer.mozilla.org/fr/docs/Web/CSS" },
-        {"nom":"EJS",       "image":"img/technos/ejs.svg"       ,"site":"https://ejs.co/"},
-        {"nom":"JavaScript","image":"img/technos/js.svg"        ,"site":"https://www.javascript.com/"},
-        {"nom":"NodeJs",    "image":"./img/technos/nodeJs.svg"  ,"site":"https://nodejs.org/fr/"},
-        {"nom":"VueJs",     "image":"img/technos/vue.svg"       ,"site":"https://fr.vuejs.org/index.html"},
-        {"nom":"MySQL",     "image":"img/technos/mysql.svg"     ,"site":"https://www.mysql.com/fr/"},
-        {"nom":"MongoDB",   "image":"img/technos/mongo.svg"     ,"site":"https://www.mongodb.com/"},
-        {"nom":"Java"       ,"image":"img/technos/java.svg"     ,"site":"https://www.java.com/fr/"}
+        {"id":0,"nom": "HTML",     "image": "img/technos/html.svg"     ,"site":"https://developer.mozilla.org/fr/docs/Web/HTML","affiche":true},
+        {"id":1,"nom": "CSS",      "image": "img/technos/css.svg"      ,"site":"https://developer.mozilla.org/fr/docs/Web/CSS" ,"affiche":true},
+        {"id":2,"nom":"EJS",       "image":"img/technos/ejs.svg"       ,"site":"https://ejs.co/","affiche":true},
+        {"id":3,"nom":"JavaScript","image":"img/technos/js.svg"        ,"site":"https://www.javascript.com/","affiche":true},
+        {"id":4,"nom":"NodeJs",    "image":"./img/technos/nodeJs.svg"  ,"site":"https://nodejs.org/fr/","affiche":true},
+        {"id":5,"nom":"VueJs",     "image":"img/technos/vue.svg"       ,"site":"https://fr.vuejs.org/index.html","affiche":true},
+        {"id":6,"nom":"MySQL",     "image":"img/technos/mysql.svg"     ,"site":"https://www.mysql.com/fr/","affiche":true},
+        {"id":7,"nom":"MongoDB"             ,"image":"img/technos/mongo.svg"     ,"site":"https://www.mongodb.com/","affiche":true},
+        {"id":8,"nom":"Java"                ,"image":"img/technos/java.svg"     ,"site":"https://www.java.com/fr/","affiche":true},
+        {"id":9,"nom": "PSD"                ,"image": "img/technos/psd.svg", "site":"https://fr.wikipedia.org/wiki/Photoshop_Document","affiche":false},
+        {"id":10,"nom": "Chrome DevTools"   ,"image": "img/technos/chrome.svg", "site":"https://developer.chrome.com/docs/","affiche":false},
+        {"id":11,"nom": "Figma"             ,"image": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg","site":"https://www.figma.com/","affiche":false},
+        {"id":12,"nom": "Spring"             ,"image": "img/technos/springio-icon.svg","site":"https://spring.io/","affiche":true},
+        {"id":13,"nom": "Postgresql"             ,"image": "img/technos/postgresql-icon.svg","site":"https://www.postgresql.org/","affiche":true}
         
     ],
     "formations":{
@@ -19,51 +24,35 @@
                 "nom": "Reservia",
                 "image": "img/maquettes/formation/opcr/reservia/Desktop - 1.PNG",
                 "github":"https://github.com/thibaultMA/Marie-Angelique_02_14122020",
-                "techno":[
-                    {"nom": "HTML", "url": "img/technos/html.svg","site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
-                    {"nom": "CSS",  "url": "img/technos/css.svg","site":"https://developer.mozilla.org/fr/docs/Web/CSS"},
-                    {"nom": "PSD",  "url": "img/technos/psd.svg","site":"https://fr.wikipedia.org/wiki/Photoshop_Document"}
-                ],
+                "techno":[0,1,9],
                 "text": "Réalisation d’une maquette de site d’agence de voyage."
 
             },{
                 "id":1,
                 "nom": "Ohmyfood",
                 "image": "img/maquettes/formation/opcr/ohmyfood/t.PNG",
-                "techno":[
-                    {"nom": "HTML", "url": "img/technos/html.svg","site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
-                    {"nom": "CSS",  "url": "img/technos/css.svg","site":"https://developer.mozilla.org/fr/docs/Web/CSS" },
-                    {"nom": "PSD",  "url": "img/technos/psd.svg","site":"https://fr.wikipedia.org/wiki/Photoshop_Document"}
-                ],
+                "techno":[0,1,9],
                 "text": "Réalisation d’une maquette et des animations en CSS à partir d’un support pour un site d'avis gastronomiques.",
                 "github":"https://github.com/thibaultMA/MArie-Angelique_03_05012021"
             },{
                 "id":2,
                 "nom": "La-chouette-agence",
                 "image": "img/maquettes/formation/opcr/la-chouette-agence/Capture.PNG",
-                "techno":[
-                    {"nom":"Chrome DevTools","url":"img/technos/chrome.svg","site":"https://developer.chrome.com/docs/"}
-                ],
+                "techno":[10],
                 "text": "Optimisation d'un site web éxistant (SEO).",
                 "github":"https://github.com/thibaultMA/Marie-Angelique_04_12022021"
             },{
                 "id":3,
                 "nom": "Orinoco",
                 "image": "img/maquettes/formation/opcr/Orinoco/Capture1.PNG",
-                "techno":[
-                    {"nom":"NodeJs","url":"img/technos/nodeJs.svg","site":"https://nodejs.org/fr/"},
-                    {"nom":"EJS","url":"img/technos/ejs.svg","site":"https://ejs.co/"}
-                ],
+                "techno":[4,2],
                 "text": "Construction d'un site de E-commerce via le traitement des données renvoyées par une API.",
                 "github":"https://github.com/thibaultMA/Marie-Angelique_05_08032021"
             },{
                 "id":4,
                 "nom": "So-Peckocko",
                 "image": "img/maquettes/formation/opcr/So-Peckocko/Capturae.PNG",
-                "techno":[
-                    {"nom":"NodeJs",    "url":"img/technos/nodeJs.svg","site":"https://nodejs.org/fr/"},
-                    {"nom":"MongoDB",   "url":"img/technos/mongo.svg","site":"https://www.mongodb.com/"}
-                ],
+                "techno":[4,7],
                 "text": "Création d'une API sécurisée qui permet aux utilisateurs d'ajouter leurs sauces préférées, de liker ou disliker celles proposées par d'autres.",
                 "github":"https://github.com/thibaultMA/Marie-Angelique_06_03062021"
                 
@@ -71,14 +60,36 @@
                 "id":5,
                 "nom": "Groupomania",
                 "image": "./img/maquettes/formation/opcr/Groupomania/deskTop.PNG",
-                "techno":[
-                    {"nom":"NodeJs","url":"img/technos/nodeJs.svg","site":"https://nodejs.org/fr/"},
-                    {"nom":"VueJs", "url":"img/technos/vue.svg","site":"https://fr.vuejs.org/index.html"},
-                    {"nom":"MySQL", "url":"img/technos/mysql.svg","site":"https://www.mysql.com/fr/"}
-                ],
+                "techno":[4,5,6],
                 "text": "Création d'un back end et d'un front end pour un réseau social d'entreprise.",
                 "github":"https://github.com/thibaultMA/Marie-Angelique_07_30062021"
             }
+
+        ],
+        "Diginamic":[
+            {
+                "id":0,
+                "nom": "TP 01 html",
+                "image": "img/maquettes/formation/diginamic/html/tp01-html.PNG",
+                "techno":[0,2,11],
+                "text": "realisation d'une maquette a partir de figma",
+                "github":"https://github.com/thibaultMA/tp-01-html"
+            },{
+                "id":1,
+                "nom": "TP 01 JS",
+                "image": "img/maquettes/formation/diginamic/js/tp-01.js.PNG",
+                "techno":[0,2,3],
+                "text": "Création d'un site de recherche de film en relation avec une api (tp en groupe)",
+                "github":"https://github.com/thibaultMA/Application-web-de-recherche-de-films/tree/main"
+            },{
+                "id":2,
+                "nom": "TP 05 Nodejs",
+                "image": "img/maquettes/formation/diginamic/node/tp05_node.PNG",
+                "techno":[4,2],
+                "text": "Création d'un IHM de chat en temps réel via socket.io",
+                "github":"https://github.com/thibaultMA/tp_05_nodejs"
+            }
+
         ]
     },
     "perso":[
@@ -86,12 +97,8 @@
             "id":0,
             "nom": "Imob",
             "image": "img/maquettes/perso/imob/Capture.PNG",
-            "techno":[
-                {"nom":"HTML","url":"img/technos/html.svg"},
-                {"nom":"CSS","url":"img/technos/css.svg"}
-            ],
-            "text": "Première réalisation de site en autodidacte pour apprendre HTML et CSS.",
-            "github":""
+            "techno":[0,1],
+            "text": "Première réalisation de site en autodidacte pour apprendre HTML et CSS."
         },{
             "id":3,
             "nom": "Maquette",
@@ -105,43 +112,22 @@
             "github":"https://github.com/thibaultMA/tp-01-html"
         },{
             "id":1,
-            "nom": "Estia",
-            "image": "img/maquettes/perso/progress.jpg",
-            "techno":[],
-            "text": "Jeu d'exploration et de stratégie en ligne sur navigateur.",
-            "github":""
-        },{
-            "id":2,
             "nom": "redimensize",
             "image": "img/maquettes/perso/redimention/Capture.PNG",
-            "techno":[
-                {"nom":"NodeJs","url":"img/technos/nodeJs.svg","site":"https://nodejs.org/fr/"},
-                {"nom":"VueJs", "url":"img/technos/vue.svg","site":"https://fr.vuejs.org/index.html"},
-                {"nom":"MongoDB",   "url":"img/technos/mongo.svg","site":"https://www.mongodb.com/"}
-            ],
-            "text": "Outil permettant de redimensionner la taille d'une image en pixels.",
-            "github":""
-        },{
-            "id":4,
-            "nom": "Film me moi",
-            "image": "img/maquettes/formation/diginamic/js/tp-01.js.PNG",
-            "techno":[
-                {"nom": "HTML", "url": "img/technos/html.svg","site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
-                {"nom": "CSS",  "url": "img/technos/css.svg","site":"https://developer.mozilla.org/fr/docs/Web/CSS"},
-                {"nom":"JavaScript","url":"img/technos/js.svg","site":"https://www.javascript.com/"}
-            ],
-            "text": "Création d'un site de recherche de film en relation avec une api (projet de groupe)",
-            "github":"https://github.com/thibaultMA/Application-web-de-recherche-de-films/tree/main"
-        },{
-            "id":5,
-            "nom": "Chat",
-            "image": "img/maquettes/formation/diginamic/node/tp05_node.PNG",
-            "techno":[
-                {"nom":"NodeJs",    "url":"img/technos/nodeJs.svg"  ,"site":"https://nodejs.org/fr/"},
-                {"nom":"EJS",       "url":"img/technos/ejs.svg"       ,"site":"https://ejs.co/"}
-            ],
-            "text": "Création d'un système de chat en temps réel via socket.io",
-            "github":"https://github.com/thibaultMA/tp_05_nodejs"
+
+            "techno":[4,5,7],
+            "text": "Outil permettant de redimensionner la taille d'une image en pixels."
+        }
+    ],
+    "pro":[
+        {
+            "id":0,
+            "nom": "CGI // DGFIP",
+            "image": "img/maquettes/pro/dgfip_eereg.PNG",
+            "techno":[8,3,12,13],
+            "text": "dématerialisation des déclaration de don et seccesion de droit sociaux",
+            "site":"https://www.impots.gouv.fr/accueil"
+
         }
     ]
 }

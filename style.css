@@ -98,7 +98,9 @@
   margin: 0;
   fill: #FFF;
 }
-
+html{
+  scroll-behavior: smooth; 
+} 
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--fontWhite);
@@ -680,7 +682,7 @@ main footer {
   -ms-flex-flow: wrap;
       flex-flow: wrap;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+      /* justify-content: space-around; */
 }
 
 .techlist .tech {

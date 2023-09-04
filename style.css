@@ -837,6 +837,7 @@ main footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-flow: wrap;
 }
 
 #projets .boxliste .definProjet .descriptionProjet .iconProjet .link {

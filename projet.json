@@ -100,17 +100,6 @@
             "techno":[0,1],
             "text": "Première réalisation de site en autodidacte pour apprendre HTML et CSS."
         },{
-            "id":3,
-            "nom": "Maquette",
-            "image": "img/maquettes/formation/diginamic/html/tp01-html.PNG",
-            "techno":[
-                {"nom": "HTML", "url": "img/technos/html.svg","site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
-                {"nom": "CSS",  "url": "img/technos/css.svg","site":"https://developer.mozilla.org/fr/docs/Web/CSS"},
-                {"nom": "figma",  "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg","site":"https://www.figma.com/"}
-            ],
-            "text": "realisation d'une maquette a partir de figma",
-            "github":"https://github.com/thibaultMA/tp-01-html"
-        },{
             "id":1,
             "nom": "redimensize",
             "image": "img/maquettes/perso/redimention/Capture.PNG",
@@ -125,7 +114,7 @@
             "nom": "CGI // DGFIP",
             "image": "img/maquettes/pro/dgfip_eereg.PNG",
             "techno":[8,3,12,13],
-            "text": "dématerialisation des déclaration de don et seccesion de droit sociaux",
+            "text": "Dématerialisation des déclaration de don et seccesion de droit sociaux",
             "site":"https://www.impots.gouv.fr/accueil"
 
         }

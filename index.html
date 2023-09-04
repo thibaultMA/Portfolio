@@ -84,9 +84,9 @@
                                 <p>+</p>
                             </div>
                         </div>
-                        <input type="submit" class="btnPage" value="_"></input>
-                        <input type="submit" class="btnPage" value="▢"></input>
-                        <input type="submit" class="btnPage" value="X"></input>
+                        <input type="submit" class="btnPage" value="_"/>
+                        <input type="submit" class="btnPage" value="▢"/>
+                        <input type="submit" class="btnPage" value="X"/>
                     </div>
                     <p class="textPresentation"></p>
                 </div>
@@ -146,21 +146,23 @@
                         <div class="boxProjet">
                             <div class="choixNavProjet">
                                 <div class="choix">
-                                    <!-- choix perso-->
-                                    <h3 class="typeProjet" v-on:click="typeProjet('perso')"
-                                        :class="{'fucusType' : categoriProjet === 'perso'  }">Personnels</h3>
-                                    <!-- choix formation -->
+                                    <!-- choix pro -->
                                     <h3 class="typeProjet" v-on:click="typeProjet('pro')"
                                         :class="{'fucusType' : categoriProjet === 'pro'  }">professionel</h3>
                                     <h3 class="typeProjet typeFormation"
-                                        v-on:click="typeProjet('formations','Openclassrooms')"
+                                        v-on:click="typeProjet('formations','Diginamic')"
                                         :class="{'fucusType' : categoriProjet === 'Diginamic'||categoriProjet === 'Openclassrooms' }">
                                         Formations</h3>
-                                    
+                                        <!-- choix perso-->
+                                    <h3 class="typeProjet" v-on:click="typeProjet('perso')"
+                                        :class="{'fucusType' : categoriProjet === 'perso'  }">Personnels</h3>
                                 </div>
                                 <div class="choix choixClasse"
                                     v-if="categoriProjet == 'Diginamic' || categoriProjet == 'Openclassrooms'">
                                     <!-- choix opcr -->
+                                    <h3 class="typeProjet" v-on:click="typeProjet('formations','Diginamic')"
+                                        :class="{'fucusType' : categoriProjet === 'Diginamic'  }">Diginamic
+                                    </h3>
                                     <h3 class="typeProjet" v-on:click="typeProjet('formations','Openclassrooms')"
                                         :class="{'fucusType' : categoriProjet === 'Openclassrooms'  }">Openclassrooms
                                     </h3>
@@ -391,7 +393,7 @@
                         return data
                     })
                     .then(proj => {
-                        this.projet = p
+                        this.projet = proj
                         
                         switch (this.categoriProjet) {
                             case "Diginamic" ||"Openclassrooms":

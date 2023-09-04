@@ -64,6 +64,7 @@
                 "text": "Création d'un back end et d'un front end pour un réseau social d'entreprise.",
                 "github":"https://github.com/thibaultMA/Marie-Angelique_07_30062021"
             }
+
         ],
         "Diginamic":[
             {
@@ -88,6 +89,7 @@
                 "text": "Création d'un IHM de chat en temps réel via socket.io",
                 "github":"https://github.com/thibaultMA/tp_05_nodejs"
             }
+
         ]
     },
     "perso":[
@@ -98,9 +100,21 @@
             "techno":[0,1],
             "text": "Première réalisation de site en autodidacte pour apprendre HTML et CSS."
         },{
+            "id":3,
+            "nom": "Maquette",
+            "image": "img/maquettes/formation/diginamic/html/tp01-html.PNG",
+            "techno":[
+                {"nom": "HTML", "url": "img/technos/html.svg","site":"https://developer.mozilla.org/fr/docs/Web/HTML"},
+                {"nom": "CSS",  "url": "img/technos/css.svg","site":"https://developer.mozilla.org/fr/docs/Web/CSS"},
+                {"nom": "figma",  "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg","site":"https://www.figma.com/"}
+            ],
+            "text": "realisation d'une maquette a partir de figma",
+            "github":"https://github.com/thibaultMA/tp-01-html"
+        },{
             "id":1,
             "nom": "redimensize",
             "image": "img/maquettes/perso/redimention/Capture.PNG",
+
             "techno":[4,5,7],
             "text": "Outil permettant de redimensionner la taille d'une image en pixels."
         }
@@ -113,6 +127,7 @@
             "techno":[8,3,12,13],
             "text": "dématerialisation des déclaration de don et seccesion de droit sociaux",
             "site":"https://www.impots.gouv.fr/accueil"
+
         }
     ]
 }

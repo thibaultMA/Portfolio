@@ -146,22 +146,20 @@
                         <div class="boxProjet">
                             <div class="choixNavProjet">
                                 <div class="choix">
+                                    <!-- choix perso-->
+                                    <h3 class="typeProjet" v-on:click="typeProjet('perso')"
+                                        :class="{'fucusType' : categoriProjet === 'perso'  }">Personnels</h3>
                                     <!-- choix formation -->
                                     <h3 class="typeProjet" v-on:click="typeProjet('pro')"
                                         :class="{'fucusType' : categoriProjet === 'pro'  }">professionel</h3>
                                     <h3 class="typeProjet typeFormation"
-                                        v-on:click="typeProjet('formations','Diginamic')"
+                                        v-on:click="typeProjet('formations','Openclassrooms')"
                                         :class="{'fucusType' : categoriProjet === 'Diginamic'||categoriProjet === 'Openclassrooms' }">
                                         Formations</h3>
-                                    <!-- choix perso-->
-                                    <h3 class="typeProjet" v-on:click="typeProjet('perso')"
-                                        :class="{'fucusType' : categoriProjet === 'perso'  }">Personnels</h3>
+                                    
                                 </div>
                                 <div class="choix choixClasse"
                                     v-if="categoriProjet == 'Diginamic' || categoriProjet == 'Openclassrooms'">
-                                    <!-- choix Diginamic -->
-                                    <h3 class="typeProjet" v-on:click="typeProjet('formations','Diginamic')"
-                                        :class="{'fucusType' : categoriProjet === 'Diginamic'  }">Diginamic</h3>
                                     <!-- choix opcr -->
                                     <h3 class="typeProjet" v-on:click="typeProjet('formations','Openclassrooms')"
                                         :class="{'fucusType' : categoriProjet === 'Openclassrooms'  }">Openclassrooms
@@ -259,7 +257,9 @@
             el: "#vue",
             data() {
                 return {
+
                     categoriProjet: 'pro',
+
                     affiche: false,
 
                     first: 0,
@@ -380,21 +380,19 @@
                 fetch('projet.json')
                     .then(response => response.json())
                     .then(data => {
-                        let { 
-                            formations,
-                            //  perso,
-                              technos 
-                            } = data
-                        // perso.reverse()
+
+                        let { formations, perso ,technos } = data
+                        perso.reverse()
+
                         for (const key in formations) {
+                            
                             formations[key].reverse()
                         }
                         return data
                     })
-                    .then(p => {
-
+                    .then(proj => {
                         this.projet = p
-                        console.log(p);
+                        
                         switch (this.categoriProjet) {
                             case "Diginamic" ||"Openclassrooms":
                                 this.currentProjet = this.projet.formations[this.categoriProjet]
@@ -406,6 +404,7 @@
                                 this.totalProjet = this.projet[this.categoriProjet].length
                                 break;
                         }
+
                         this.endLoad()
                     })
             },

@@ -315,7 +315,7 @@ header .hfond .nav {
   transition: 0.5s;
 }
 
-main {
+main,#contact {
   max-width: 1400px;
   margin: auto;
   padding: 20px 1% 0;
@@ -915,7 +915,7 @@ main footer {
 #projets .boxliste .boxProjet .choixNavProjet .choixClasse {
   margin-top: 10px;
   padding-top: 10px;
-  border-top: solid;
+  border-top: solid 2px;
 }
 
 #projets .boxliste .boxProjet .choixNavProjet .typeProjet {
@@ -1067,7 +1067,7 @@ main footer {
   word-wrap: auto;
 }
 
-#contact {
+footer {
   border-top: solid var(--barre);
   background: var(--box);
   margin-top: 10%;

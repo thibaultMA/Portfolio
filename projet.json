@@ -112,7 +112,7 @@
     "pro":[
         {
             "id":0,
-            "nom": "E-enreg",
+            "nom": "e-Enregistrement",
             "image": "img/maquettes/pro/dgfip_eereg.PNG",
             "techno":[8,2,12,13,14],
             "text": "Dématérialisation des déclarations de dons et cession de droits sociaux",
